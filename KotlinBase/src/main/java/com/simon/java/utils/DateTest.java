@@ -1,4 +1,4 @@
-package com.simon.code.utils;
+package com.simon.java.utils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

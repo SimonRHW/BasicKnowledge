@@ -1,4 +1,4 @@
-package com.simon.code.annotation;
+package com.simon.java.annotation;
 
 public class NoBug {
     @TestAnnotation

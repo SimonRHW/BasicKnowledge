@@ -1,4 +1,4 @@
-package com.simon.code.annotation;
+package com.simon.java.annotation;
 
 
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package com.simon.code.annotation;
+package com.simon.java.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

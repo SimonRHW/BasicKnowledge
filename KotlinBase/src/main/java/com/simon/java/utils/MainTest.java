@@ -1,19 +1,11 @@
-package com.simon.code.utils;
+package com.simon.java.utils;
 
 
-import java.sql.Timestamp;
 import java.text.DecimalFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static javax.management.timer.Timer.ONE_DAY;
-import static javax.management.timer.Timer.ONE_HOUR;
-import static javax.management.timer.Timer.ONE_MINUTE;
 
 /**
  * Created by renhongwei on 2018/5/5.

@@ -1,4 +1,4 @@
-package com.simon.code.algorithm;
+package com.simon.java.algorithm;
 
 public class Algorithm {
 

@@ -1,4 +1,4 @@
-package com.simon.code.concurrent;
+package com.simon.java.concurrent;
 
 import java.util.concurrent.CountDownLatch;
 

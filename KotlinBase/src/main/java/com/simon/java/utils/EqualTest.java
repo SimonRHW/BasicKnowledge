@@ -1,4 +1,4 @@
-package com.simon.code.utils;
+package com.simon.java.utils;
 
 public class EqualTest {
 

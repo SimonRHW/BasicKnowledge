@@ -1,4 +1,4 @@
-package com.simon.code.algorithm;
+package com.simon.java.algorithm;
 
 /**
  * 递归实现n的阶乘
