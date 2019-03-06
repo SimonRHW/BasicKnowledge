@@ -14,7 +14,7 @@ public class TestClass {
         // 记录异常的次数
         int errornum = 0;
         for (Method m : method) {
-            // 只有被 @Jiecha 标注过的方法才进行测试
+            // 只有被 @TestAnnotation 标注过的方法才进行测试
             if (m.isAnnotationPresent(TestAnnotation.class)) {
                 try {
                     m.setAccessible(true);

@@ -2,7 +2,9 @@ package com.simon.java.utils;
 
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -31,9 +33,20 @@ public class MainTest {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
+//
+//        ArrayList list = new ArrayList();
+//        System.out.println(chineseToNumber("2元"));
 
 
-        System.out.println(chineseToNumber("2元"));
+        int low = 10;
+        int totle = 7794;
+        // 创建一个数值格式化对象
+        NumberFormat numberFormat = NumberFormat.getInstance();
+        // 设置精确到小数点后2位
+        numberFormat.setMaximumFractionDigits(2);
+        String result = numberFormat.format((float)low/(float)totle);
+
+        System.out.println(result);
 
     }
 
