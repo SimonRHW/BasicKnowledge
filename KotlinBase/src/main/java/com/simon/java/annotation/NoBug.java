@@ -1,6 +1,7 @@
 package com.simon.java.annotation;
 
 public class NoBug {
+
     @TestAnnotation
     public void number() {
         System.out.println("1234567890");
@@ -30,4 +31,5 @@ public class NoBug {
     public void noBug() {
         System.out.println("我写的程序没有 bug!");
     }
+
 }

@@ -9,10 +9,9 @@ public class TestClass {
         NoBug testobj = new NoBug();
         Class clazz = testobj.getClass();
         Method[] method = clazz.getDeclaredMethods();
-        //用来记录测试产生的 log 信息
         StringBuilder log = new StringBuilder();
         // 记录异常的次数
-        int errornum = 0;
+        int errorTimes = 0;
         for (Method m : method) {
             // 只有被 @TestAnnotation 标注过的方法才进行测试
             if (m.isAnnotationPresent(TestAnnotation.class)) {
@@ -20,7 +19,7 @@ public class TestClass {
                     m.setAccessible(true);
                     m.invoke(testobj, null);
                 } catch (Exception e) {
-                    errornum++;
+                    errorTimes++;
                     log.append(m.getName());
                     log.append(" ");
                     log.append("has error:");
@@ -36,7 +35,7 @@ public class TestClass {
         }
         log.append(clazz.getSimpleName());
         log.append(" has  ");
-        log.append(errornum);
+        log.append(errorTimes);
         log.append(" error.");
         // 生成测试报告
         System.out.println(log.toString());
