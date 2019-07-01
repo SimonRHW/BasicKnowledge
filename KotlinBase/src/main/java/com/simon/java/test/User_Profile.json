@@ -1,0 +1,555 @@
+{
+ "OBUUSPID_OBUversion":"550e8400-e29b-41d4-a716-446655440000_1552795322",
+ "uid1_91_20":{
+   "ARD.Angle":{
+     "Set":"V",
+     "value":{"MBU":17,"GPM":17,"GPK":17,"GPS":17,"LCS":17,"LCH":17,"LES":17,"LEU":17}
+      }
+     },
+ "uid2_91_20":{
+  "ARD.Brightness":{
+     "value":9,
+     "Set":"G"
+      }
+    },
+ "uid3_91_20":{
+  "DriverSeat.Recliner":{
+     "Set":"V",
+     "value":{"MBU":17,"GPM":17,"GPK":17,"GPS":17,"LCS":17,"LCH":17,"LES":17,"LEU":17}
+     }
+   },
+ "uid4_91_20":{
+  "DriverSeat.lifter":{
+     "Set":"V",
+     "value":{"MBU":17,"GPM":17,"GPK":17,"GPS":17,"LCS":17,"LCH":17,"LES":17,"LEU":17}
+      }
+    },
+ "uid5_91_20":{
+  "DriverSeat.slider":{
+     "Set":"V",
+     "value":{"MBU":17,"GPM":17,"GPK":17,"GPS":17,"LCS":17,"LCH":17,"LES":17,"LEU":17}
+      }
+    },
+ "uid6_91_20":{
+  "DriverSeat.tilt":{
+     "Set":"V",
+     "value":{"MBU":17,"GPM":17,"GPK":17,"GPS":17,"LCS":17,"LCH":17,"LES":17,"LEU":17}
+      }
+    },
+ "uid7_91_20":{
+  "Display.mode":{
+     "value":2,
+     "Set":"G"
+      }
+    },
+ "uid8_91_20":{
+  "StartStop":{
+     "value":"true",
+     "Set":"G"
+      }
+    },
+ "uid9_91_20":{
+  "HDC.Set":{
+     "value":"true",
+     "Set":"G"
+      }
+    },
+ "uid10_91_20":{
+  "Fsonar.Sound":{
+     "value":"true",
+     "Set":"G"
+      }
+    },
+ "uid11_91_20":{
+  "Display.Brightness.Day":{
+     "Set":"V",
+     "value":{"MBU":50,"GPM":50,"GPK":50,"GPS":50,"LCS":50,"LCH":50,"LES":50,"LEU":50}
+      }
+    },
+ "uid12_91_20":{
+  "Display.Brightness.Night":{
+     "Set":"V",
+     "value":{"MBU":50,"GPM":50,"GPK":50,"GPS":50,"LCS":50,"LCH":50,"LES":50,"LEU":50}
+      }
+    },
+ "uid13_91_20":{
+  "Display.Contrast.Day":{
+     "value":0,
+     "Set":"G"
+      }
+    },
+ "uid14_91_20":{
+  "Display.Contrast.Night":{
+     "value":0,
+     "Set":"G"
+      }
+    },
+ "uid15_91_20":{
+  "LanguageSet":{
+     "value":0,
+     "Set":"G"
+      }
+    },
+ "uid16_91_20":{
+  "Unit.Temp":{
+     "value":"false",
+     "Set":"G"
+      }
+    },
+ "uid17_91_20":{
+  "Unit.Dist":{
+     "value":"false",
+     "Set":"G"
+      }
+    },
+ "uid18_91_20":{
+  "Unit.Pressure":{
+     "value":"true",
+     "Set":"G"
+      }
+    },
+ "uid19_91_20":{
+  "GPSTime.Sync":{
+     "value":"false",
+     "Set":"G"
+      }
+    },
+ "uid20_91_20":{
+  "Time.Unit.1224":{
+     "value":"true",
+     "Set":"G"
+      }
+    },
+ "uid21_91_40":{
+  "OBUCard.item":{
+     "Set":"V",
+     "value":{"MBU":[3,1,0,0,0,0],"GPM": [3,1,0,0,0,0],"GPK": [3,1,0,0,0,0],"GPS": [3,1,0,0,0,0],"LCS": [3,1,0,0,0,0],"LCH": [3,1,0,0,0,0],"LES": [3,1,0,0,0,0],"LEU": [3,1,0,0,0,0]}
+      }
+    },
+ "uid22_91_40":{
+  "Volumn.Usb":{
+     "Set":"V",
+     "value":{"MBU":15,"GPM":15,"GPK":15,"GPS":15,"LCS":15,"LCH":15,"LES":15,"LEU":15}
+      }
+    },
+ "uid23_91_40":{
+  "Volumn.BT":{
+     "Set":"V",
+     "value":{"MBU":15,"GPM":15,"GPK":15,"GPS":15,"LCS":15,"LCH":15,"LES":15,"LEU":15}
+      }
+    },
+ "uid24_91_40":{
+  "Volumn.Radio":{
+     "Set":"V",
+     "value":{"MBU":15,"GPM":15,"GPK":15,"GPS":15,"LCS":15,"LCH":15,"LES":15,"LEU":15}
+      }
+    },
+ "uid25_91_40":{
+  "Volumn.HDMI":{
+     "Set":"V",
+     "value":{"MBU":15,"GPM":15,"GPK":15,"GPS":15,"LCS":15,"LCH":15,"LES":15,"LEU":15}
+      }
+    },
+ "uid26_91_40":{
+  "Volumn.DVD":{
+     "Set":"V",
+     "value":{"MBU":15,"GPM":15,"GPK":15,"GPS":15,"LCS":15,"LCH":15,"LES":15,"LEU":15}
+      }
+    },
+ "uid27_91_40":{
+  "Volumn.Phone":{
+     "Set":"V",
+     "value":{"MBU":15,"GPM":15,"GPK":15,"GPS":15,"LCS":15,"LCH":15,"LES":15,"LEU":15}
+      }
+    },
+ "uid28_91_40":{
+  "Sound.Balance":{
+     "Set":"V",
+     "value":{"MBU":[0,0],"GPM":[0,0],"GPK":[0,0],"GPS":[0,0],"LCS":[0,0],"LCH":[0,0],"LES":[0,0],"LEU":[0,0]}
+      }
+    },
+ "uid29_91_40":{
+  "Sound.Warning":{
+     "value":"true",
+     "Set":"G"
+     }
+    },
+ "uid30_91_40":{
+  "Sound.OffCar":{
+     "value":"true",
+     "Set":"G"
+     }
+    },
+ "uid31_91_40":{
+  "Sound.Touch":{
+     "value":"true",
+     "Set":"G"
+     }
+    },
+ "uid32_91_40":{
+  "Sound.Speedup":{
+     "value":"true",
+     "Set":"G"
+     }
+    },
+ "uid33_91_40":{
+  "Sound.Reverse":{
+     "value":"true",
+     "Set":"G"
+     }
+    },
+ "uid34_91_40":{
+  "Sound.Tremble":{
+     "value":6,
+     "Set":"G"
+     }
+    },
+ "uid35_91_40":{
+  "Sound.Middle":{
+     "value":6,
+     "Set":"G"
+     }
+    },
+ "uid36_91_40":{
+  "Sound.Bass":{
+     "value":6,
+     "Set":"G"
+     }
+    },
+ "uid37_91_40":{
+  "Mode.EQ":{
+     "value":7,
+     "Set":"G"
+     }
+    },
+ "uid38_91_40":{
+  "radio.FM.0": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid39_91_40":{
+  "radio.FM.1": {
+     "value": 90.1,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid40_91_40":{
+  "radio.FM.2": {
+     "value": 98.1,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid41_91_60":{
+  "radio.FM.3": {
+     "value": 106.1,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid42_91_60":{
+  "radio.FM.4": {
+     "value": 107.9,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid43_91_60":{
+  "radio.FM.5": {
+     "value": 102.9,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid44_91_60":{
+  "radio.FM.6": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid45_91_60":{
+  "radio.FM.7": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid46_91_60":{
+  "radio.FM.8": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid47_91_60":{
+  "radio.FM.9": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid48_91_60":{
+  "radio.FM.10": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid49_91_60":{
+  "radio.FM.11": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid50_91_60":{
+  "radio.FM.12": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid51_91_60":{
+  "radio.FM.13": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid52_91_60":{
+  "radio.FM.14": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid53_91_60":{
+  "radio.FM.15": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid54_91_60":{
+  "radio.FM.16": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid55_91_60":{
+  "radio.FM.17": {
+     "value": 87.5,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid56_91_60":{
+  "radio.AM.0": {
+     "value": 531,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid57_91_60":{
+  "radio.AM.1": {
+     "value": 999,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid58_91_60":{
+  "radio.AM.2": {
+     "value": 1404,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid59_91_60":{
+  "radio.AM.3": {
+     "value": 1629,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid60_91_60":{
+  "radio.AM.4": {
+     "value": 531,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid61_91_80":{
+  "radio.AM.5": {
+     "value": 531,
+     "name": "",
+     "Set":"G"
+     }
+   },
+ "uid62_91_80":{
+  "Radio.Set":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid63_91_80":{
+  "DriverSeat.Antitheft":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid64_91_80":{
+  "DriverSeat.Entry":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid65_91_80":{
+  "PTG.Set":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid66_91_80":{
+  "mantainence.Reminder":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid67_91_80":{
+  "LDWS.Warn":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid68_91_80":{
+  "PDS.Warn":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid69_91_80":{
+  "FCW.Warn":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid70_91_80":{
+  "AEB.Set":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid71_91_80":{
+  "LKA.Set":{
+     "value":"false",
+     "Set":"G"
+     }
+   },
+ "uid72_91_80":{
+  "BSD.Set":{
+     "value":"true",
+     "Set":"G"
+     }
+   },
+ "uid73_91_80":{
+  "Sideview.Set":{
+     "value":"true",
+     "Set":"G"
+     }
+   },
+ "uid74_91_80":{
+  "CarLeave.Reminder":{
+     "value":"true",
+     "Set":"G"
+     }
+   },
+ "uid75_91_80":{
+  "ESC.Set":{
+     "value":"true",
+     "Set":"G"
+     }
+   },
+ "uid76_91_80":{
+  "TCS.Set":{
+     "value":"true",
+     "Set":"G"
+     }
+   },
+ "uid77_91_80":{
+  "ARACC.Set":""
+   },
+ "uid78_91_80":{
+  "ARACC.Speed":""
+   },
+ "uid79_91_80":{
+  "OneTouch.Set":{
+     "value":"true",
+     "Set":"G"
+     }
+   },
+ "uid80_91_80":{
+  "Reminder.LowSOC":""
+   },
+ "uid81_91_91":{
+  "ECO.Set":""
+   },
+ "uid82_91_91":{
+  "VSP.Volumn":""
+   },
+ "uid83_91_91":{
+  "VSP.Mode":""
+   },
+ "uid84_91_91":{
+  "AC.Temp":{
+     "value":25,
+     "Set":"G"
+     }
+   },
+ "uid85_91_91":{
+  "AC.Set":{
+     "value":"true",
+     "Set":"G"
+     }
+   },
+ "uid86_91_91":{
+  "AC.Fan":{
+     "value":1,
+     "Set":"G"
+     }
+   },
+ "uid87_91_91":{
+  "AC.Mode":{
+     "value":1,
+     "Set":"G"
+     }
+   },
+ "uid88_91_91":{
+  "Recircule.Set":{
+     "value":"true",
+     "Set":"G"
+     }
+   },
+ "uid89_91_91":{
+  "AC.Auto":{
+     "value":"true",
+     "Set":"G"
+     }
+   },
+ "uid90_91_91":{
+  "Display.LRAngle":{
+     "Set":"V",
+     "value":{"MBU":8,"GPM":8,"GPK":8,"GPS":8,"LCS":8,"LCH":8,"LES":8,"LEU":8}
+     }
+   },
+ "uid91_91_91":{
+  "Display.UDAngle":{
+     "Set":"V",
+     "value":{"MBU":"","GPM":1,"GPK":1,"GPS":1,"LCS":1,"LCH":1,"LES":1,"LEU":1}
+     }
+   }
+}

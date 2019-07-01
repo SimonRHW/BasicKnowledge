@@ -39,7 +39,11 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     //gson
     compile 'com.google.java.gson:gson:2.8.4'
+    //guava
+    compile 'com.google.guava:guava:28.0-jre'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile 'org.apache.commons:commons-lang3:3.6'
 }
 
 compileKotlin {
