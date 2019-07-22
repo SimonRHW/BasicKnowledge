@@ -6,7 +6,7 @@ import com.sun.org.apache.xml.internal.security.utils.Base64;
 public class StringUtils {
 
     public static void  main(String args[]){
-        String test1 = "eyJSZXN0cmljdFBvd2VyT2ZmIjoiZmFpbGVkIn0=";
+        String test1 = "eyJhbGx3aW5kb3dzb3BlbiI6IiJ9";
 
         String test2 = "{\"RestrictPowerOff\":\"failed\"}";
 
