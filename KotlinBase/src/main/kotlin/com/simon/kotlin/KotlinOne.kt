@@ -6,13 +6,16 @@ fun main(){
 
     Test("no bug ").result()
 
+    val language = "kotlin"
+
+    val text = "$language has ${language.length} characters"
+
+    println(text)
+
 }
 
-
 class Test (val  msg:String){
-
     fun result(){
         println(msg)
     }
-
 }

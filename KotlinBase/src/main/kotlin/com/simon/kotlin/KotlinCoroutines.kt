@@ -3,8 +3,8 @@ package com.simon.kotlin
 import kotlinx.coroutines.*
 
 suspend fun main() = coroutineScope {
-    val task1 = async { fetchResult(id = 42) }
-    val task2 = async { fetchResult(id = 99) }
+    val task1 = async { fetchResult(id = 36) }
+    val task2 = async { fetchResult(id = 72) }
     val results = awaitAll(task1, task2)
     log(results)
 }

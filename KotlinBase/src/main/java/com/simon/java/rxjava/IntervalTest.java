@@ -12,16 +12,17 @@ import java.util.concurrent.TimeUnit;
 public class IntervalTest {
     public static void main(String[] args) {
         testOne();
-        //testTwo();
     }
 
     public static void testOne() {
-        Disposable subscribe = Observable.interval(5, TimeUnit.SECONDS)
-                .subscribeOn(Schedulers.computation())
+        long start = System.currentTimeMillis();
+        Disposable subscribe = Observable.interval(2, TimeUnit.SECONDS, Schedulers.trampoline())
+                .take(3)
                 .subscribe(new Consumer<Long>() {
                     @Override
                     public void accept(Long aLong) throws Exception {
                         System.out.println("onNext" + aLong);
+                        System.out.println("onNext" + (System.currentTimeMillis() - start));
                     }
                 }, new Consumer<Throwable>() {
                     @Override
@@ -34,16 +35,16 @@ public class IntervalTest {
                         System.out.println("onComplete");
                     }
                 });
-
     }
 
     public static void testTwo() {
-        DisposableObserver<Long> disposableObserver = Observable.interval(5, 5, TimeUnit.SECONDS)
-                .subscribeOn(Schedulers.computation())
+        long start = System.currentTimeMillis();
+        DisposableObserver<Long> disposableObserver = Observable.interval(1, 2, TimeUnit.SECONDS, Schedulers.trampoline())
                 .subscribeWith(new DisposableObserver<Long>() {
                     @Override
                     public void onNext(Long aLong) {
                         System.out.println("onNext" + aLong);
+                        System.out.println("onNext" + (System.currentTimeMillis() - start));
                     }
 
                     @Override
@@ -56,7 +57,6 @@ public class IntervalTest {
                         System.out.println("onComplete");
                     }
                 });
-
     }
 
 }
