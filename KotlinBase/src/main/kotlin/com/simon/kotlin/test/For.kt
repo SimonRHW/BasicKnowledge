@@ -1,4 +1,4 @@
-package com.simon.kotlin
+package com.simon.kotlin.test
 
 /**
  * @author Simon
