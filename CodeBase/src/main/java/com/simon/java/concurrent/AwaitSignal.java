@@ -26,14 +26,14 @@ public class AwaitSignal {
             lock.lock();
             try {
                 while (!flag) {
-                    System.out.println(Thread.currentThread().getName() + "当前条件不满足等待");
+                    System.out.println(Thread.currentThread().getName() +"当前条件不满足");
                     try {
                         condition.await();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
-                System.out.println(Thread.currentThread().getName() + "接收到通知条件满足");
+                System.out.println(Thread.currentThread().getName() + "当前条件不满足");
             } finally {
                 lock.unlock();
             }

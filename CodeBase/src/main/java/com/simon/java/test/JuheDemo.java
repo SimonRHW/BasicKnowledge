@@ -49,7 +49,6 @@ public class JuheDemo {
 
     public static void main(String[] args) {
         mobileQuery();
-
     }
 
     /**
@@ -87,7 +86,6 @@ public class JuheDemo {
                     DataOutputStream out = new DataOutputStream(conn.getOutputStream());
                     out.writeBytes(urlencode(params));
                 } catch (Exception e) {
-                    // TODO: handle exception
                     e.printStackTrace();
                 }
             }

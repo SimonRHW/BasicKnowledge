@@ -29,7 +29,7 @@ public class NoBug {
 
     @TestAnnotation
     public void noBug() {
-        System.out.println("我写的程序没有 bug!");
+        System.out.println("my code no bug");
     }
 
 }
