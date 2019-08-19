@@ -28,8 +28,7 @@ public class JuheDemo {
         String url = "http://v.juhe.cn/sms/send";//请求接口地址
         Map params = new HashMap();//请求参数
 
-//        params.put("mobile", "18356010525");//接受短信的用户手机号码
-        params.put("mobile", "18226509536");//接受短信的用户手机号码
+        params.put("mobile", "xxxxxxxxxxx");//接受短信的用户手机号码
         params.put("tpl_id", "166829");//您申请的短信模板ID，根据实际情况修改
         params.put("tpl_value", "#code#=666666");//您设置的模板变量，根据实际情况修改
         params.put("key", "789811e31cb098ce731ae11f68e30b2b");//应用APPKEY(应用详细页查询)

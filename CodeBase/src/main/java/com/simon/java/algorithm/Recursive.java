@@ -9,12 +9,13 @@ public class Recursive {
         System.out.println(Recursive.doRecursive(1));
         System.out.println(Recursive.doRecursive(2));
         System.out.println(Recursive.doRecursive(3));
+        System.out.println(Recursive.doRecursive(5));
+        System.out.println(Recursive.doRecursive(7));
 
     }
 
-
-    public static int doRecursive(int n) {
-        if (n == 0 || n == 1) {
+    private static int doRecursive(int n) {
+        if (n == 0) {
             return 1;
         }
         return n * doRecursive(n - 1);
