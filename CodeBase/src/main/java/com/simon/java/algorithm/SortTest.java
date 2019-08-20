@@ -9,7 +9,7 @@ import java.security.SecureRandom;
  */
 public class SortTest {
 
-    private static final int DATA_LENGTH = 100;
+    private static final int DATA_LENGTH = 100000;
 
     public static void main(String[] args) {
 
