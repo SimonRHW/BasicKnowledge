@@ -2,7 +2,6 @@ package com.simon.java.algorithm;
 
 /**
  * @author Simon
- * Function:冒泡排序
  */
 public class BubbleSort {
 

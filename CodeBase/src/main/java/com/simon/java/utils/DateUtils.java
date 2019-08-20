@@ -5,9 +5,7 @@ import java.util.Date;
 
 public class DateUtils {
 
-    /**
-     * 判断选择的日期是否是今天
-     */
+
     public static boolean isToday(long time) {
         Date date = new Date(time);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -18,12 +16,7 @@ public class DateUtils {
         return param.equals(now);
     }
 
-    /**
-     * 将毫秒时间转换成时分秒
-     *
-     * @param totalTime 毫秒时间戳
-     * @return 格式化号的时间格式
-     */
+
     public static String formatTime(int totalTime) {
         int hour = 0;
         int minute = 0;

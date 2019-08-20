@@ -2,7 +2,6 @@ package com.simon.kotlin.algorithm
 
 /**
  * @author Simon
- * Function:冒泡排序
  */
 fun bubbleSort(data: Array<Int>) {
 

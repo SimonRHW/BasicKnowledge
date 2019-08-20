@@ -1,6 +1,5 @@
 package com.simon.java.utils;
 
-import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 

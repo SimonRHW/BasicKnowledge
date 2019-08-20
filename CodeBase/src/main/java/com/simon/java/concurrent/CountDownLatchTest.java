@@ -2,9 +2,6 @@ package com.simon.java.concurrent;
 
 import java.util.concurrent.CountDownLatch;
 
-/**
- * CountDownLatch一般用于某个线程A等待若干个其他线程执行完任务之后，它才执行
- */
 public class CountDownLatchTest {
     public static void main(String[] args) {
         final CountDownLatch latch = new CountDownLatch(2);
@@ -26,7 +23,7 @@ public class CountDownLatchTest {
             public void run() {
                 try {
                     System.out.println("子线程"+Thread.currentThread().getName()+"正在执行");
-                    Thread.sleep(3000);
+                    Thread.sleep(1000);
                     System.out.println("子线程"+Thread.currentThread().getName()+"执行完毕");
                     latch.countDown();
                 } catch (InterruptedException e) {

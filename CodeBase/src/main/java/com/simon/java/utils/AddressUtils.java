@@ -9,20 +9,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-/**
- * 根据IP地址获取详细的地域信息
- *
- * @author Lwl
- * @dateJan 26, 2016
- */
 public class AddressUtils {
 
-    /**
-     * @param content        请求的参数 格式为：name=xxx&pwd=xxx
-     * @param encodingString 服务器端请求编码。如GBK,UTF-8等
-     * @return
-     * @throws UnsupportedEncodingException
-     */
     public String getAddresses(String content, String encodingString)
             throws UnsupportedEncodingException {
         // 这里调用pconline的接口
@@ -81,12 +69,7 @@ public class AddressUtils {
         return null;
     }
 
-    /**
-     * @param urlStr   请求的地址
-     * @param content  请求的参数 格式为：name=xxx&pwd=xxx
-     * @param encoding 服务器端请求编码。如GBK,UTF-8等
-     * @return
-     */
+
     private String getResult(String urlStr, String content, String encoding) {
         URL url = null;
         HttpURLConnection connection = null;
@@ -124,13 +107,6 @@ public class AddressUtils {
         return null;
     }
 
-    /**
-     * unicode 转换成 中文
-     *
-     * @param theString
-     * @return
-     * @author fanhui 2007-3-15
-     */
     public static String decodeUnicode(String theString) {
         char aChar;
         int len = theString.length();

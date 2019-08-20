@@ -2,9 +2,7 @@ package com.simon.java.concurrent;
 
 import java.util.concurrent.Semaphore;
 
-/**
- * Semaphore其实和锁有点类似，它一般用于控制对某组资源的访问权限。
- */
+
 public class SemaphoreTest {
     public static void main(String[] args) {
         int N = 8;            //工人数
