@@ -33,7 +33,7 @@ public class AwaitSignal {
                         e.printStackTrace();
                     }
                 }
-                System.out.println(Thread.currentThread().getName() + "当前条件不满足");
+                System.out.println(Thread.currentThread().getName() + "当前条件满足");
             } finally {
                 lock.unlock();
             }

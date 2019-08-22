@@ -1,7 +1,9 @@
 package com.simon.java.concurrent;
 
 import java.util.concurrent.CountDownLatch;
-
+/**
+ * CountDownLatch一般用于某个线程A等待若干个其他线程执行完任务之后，它才执行
+ */
 public class CountDownLatchTest {
     public static void main(String[] args) {
         final CountDownLatch latch = new CountDownLatch(2);

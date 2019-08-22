@@ -2,7 +2,9 @@ package com.simon.java.concurrent;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
-
+/**
+ * CyclicBarrier一般用于一组线程互相等待至某个状态，然后这一组线程再同时执行
+ */
 public class CyclicBarrierTest {
     public static void main(String[] args) {
         int N = 4;
