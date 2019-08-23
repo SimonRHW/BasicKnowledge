@@ -1,6 +1,7 @@
 package com.simon.java.rxjava;
 
 import io.reactivex.Observable;
+import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
@@ -11,7 +12,8 @@ import java.util.concurrent.TimeUnit;
 
 public class IntervalTest {
     public static void main(String[] args) {
-        testOne();
+//        testOne();
+        testThree();
     }
 
     public static void testOne() {
@@ -57,6 +59,55 @@ public class IntervalTest {
                         System.out.println("onComplete");
                     }
                 });
+    }
+
+    public static void testThree() {
+        Observable<Long> longObservable = Observable.intervalRange(3, 5, 3, 1, TimeUnit.SECONDS, Schedulers.trampoline());
+        longObservable.subscribe(new Observer<Long>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+                System.out.println("========================onSubscribe ");
+            }
+
+            @Override
+            public void onNext(Long aLong) {
+                System.out.println("========================onNext " + aLong);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                System.out.println("========================onError ");
+            }
+
+            @Override
+            public void onComplete() {
+                System.out.println("========================onComplete ");
+            }
+        });
+        Observable.intervalRange(1, 5, 0, 1, TimeUnit.SECONDS,Schedulers.trampoline())
+                .skipUntil(longObservable)
+                .subscribe(new Observer<Long>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        System.out.println("========================onSubscribe ");
+                    }
+
+                    @Override
+                    public void onNext(Long along) {
+                        System.out.println("========================onNext " + along);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        System.out.println("========================onError ");
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        System.out.println("========================onComplete ");
+                    }
+                });
+
     }
 
 }
