@@ -23,11 +23,11 @@ public class JuheDemo {
     public static final int DEF_CONN_TIMEOUT = 30000;
     public static final int DEF_READ_TIMEOUT = 30000;
     public static String userAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36";
+
     public static void mobileQuery() {
         String result = null;
         String url = "http://v.juhe.cn/sms/send";//请求接口地址
-        Map params = new HashMap();//请求参数
-
+        HashMap<String, String> params = new HashMap<String, String>();//请求参数
         params.put("mobile", "xxxxxxxxxxx");//接受短信的用户手机号码
         params.put("tpl_id", "166829");//您申请的短信模板ID，根据实际情况修改
         params.put("tpl_value", "#code#=666666");//您设置的模板变量，根据实际情况修改
@@ -57,7 +57,7 @@ public class JuheDemo {
      * @return 网络请求字符串
      * @throws Exception
      */
-    public static String net(String strUrl, Map params, String method) throws Exception {
+    public static String net(String strUrl, Map<String, String> params, String method) throws Exception {
         HttpURLConnection conn = null;
         BufferedReader reader = null;
         String rs = null;
@@ -111,7 +111,7 @@ public class JuheDemo {
     //将map型转为请求参数型
     public static String urlencode(Map<String, String> data) {
         StringBuilder sb = new StringBuilder();
-        for (Map.Entry i : data.entrySet()) {
+        for (Map.Entry<String, String> i : data.entrySet()) {
             try {
                 sb.append(i.getKey()).append("=").append(URLEncoder.encode(i.getValue() + "", "UTF-8")).append("&");
             } catch (UnsupportedEncodingException e) {

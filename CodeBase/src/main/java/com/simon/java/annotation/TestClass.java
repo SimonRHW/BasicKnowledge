@@ -15,7 +15,7 @@ public class TestClass {
             if (m.isAnnotationPresent(TestAnnotation.class)) {
                 try {
                     m.setAccessible(true);
-                    m.invoke(testobj, null);
+                    m.invoke(testobj, (Object) null);
                 } catch (Exception e) {
                     errorTimes++;
                     log.append(m.getName());

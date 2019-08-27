@@ -9,7 +9,7 @@ import java.security.SecureRandom;
  */
 public class SortTest {
 
-    private static final int DATA_LENGTH = 100000;
+    private static final int DATA_LENGTH = 10;
 
     public static void main(String[] args) {
 
@@ -25,9 +25,11 @@ public class SortTest {
 
         long start = System.currentTimeMillis();
         System.out.println("onStart ==" + start);
-//        BubbleSort.bubbleSort(data);
 //        InsertSort.insertionSort(data);
-        InsertSort.insertionSwapSort(data);
+//        InsertSort.insertionSwapSort(data);
+//        ShellSort.shell_sort(data);
+//        BubbleSort.bubbleSort(data);
+        SelectionSort.selectionSort(data);
         long end = System.currentTimeMillis();
         System.out.println("onComplete ==" + end);
         System.out.println("time ==" + (end - start));
