@@ -29,7 +29,9 @@ public class SortTest {
 //        InsertSort.insertionSwapSort(data);
 //        ShellSort.shell_sort(data);
 //        BubbleSort.bubbleSort(data);
-        SelectionSort.selectionSort(data);
+//        SelectionSort.selectionSort(data);
+//        RadixSort.radixSort(data);
+        BubbleSort.bubblesort(data);
         long end = System.currentTimeMillis();
         System.out.println("onComplete ==" + end);
         System.out.println("time ==" + (end - start));
