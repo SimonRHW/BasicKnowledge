@@ -6,6 +6,7 @@ import java.util.Arrays;
  * @author Simon
  */
 public class BubbleSort {
+
     private static int[] sort = new int[]{10, 20, 3, 5, 6, 4, 9, 8, 12, 1, 17, 34, 11};
 
     public static void main(String[] args) {

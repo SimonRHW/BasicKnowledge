@@ -36,5 +36,4 @@ public class TestClass {
         System.out.println(log.toString());
     }
 
-
 }
