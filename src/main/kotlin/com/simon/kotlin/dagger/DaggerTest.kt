@@ -2,7 +2,6 @@ package com.simon.kotlin.dagger
 
 import javax.inject.Inject
 
-//@Inject constructor(private val apiServices: ApiServices)
 class DaggerTest {
 
     @Inject
