@@ -1,4 +1,4 @@
-package com.simon.java.test;
+package com.simon.java.example;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;

@@ -1,7 +1,6 @@
 package com.simon.kotlin.algorithm
 
 fun main(){
-
     println(foo(0))
     println(foo(1))
     println(foo(2))

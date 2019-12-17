@@ -1,21 +1,28 @@
 package com.simon.kotlin.test
 
-fun main(){
+fun main() {
+    val string = "I am Kotlin"
+    val int = 1234
+    val long = 1234L
+    val float = 1234f
+    val double = 12.34
+    val double2 = 10.1e6
 
-    println("Hello World")
+    printlnClassName(string)
+    printlnClassName(int)
+    printlnClassName(long)
+    printlnClassName(float)
+    printlnClassName(double)
+    printlnClassName(double2)
 
-    Test("no bug ").result()
-
-    val language = "kotlin"
-
-    val text = "$language has ${language.length} characters"
-
-    println(text)
-
+    val sum = sum(2, 3)
+    print(sum)
 }
 
-class Test (val  msg:String){
-    fun result(){
-        println(msg)
-    }
+fun printlnClassName(msg: Any) {
+    println(msg.javaClass.name)
+}
+
+fun sum(x: Int, y: Int): Int {
+    return x + y
 }

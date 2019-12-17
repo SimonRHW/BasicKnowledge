@@ -13,7 +13,6 @@ fun bubbleSort(data: Array<Int>) {
                 val temp = data[j]
                 data[j] = data[j + 1]
                 data[j + 1] = temp
-
             }
         }
     }
