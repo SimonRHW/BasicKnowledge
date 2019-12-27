@@ -31,7 +31,7 @@ public class JuheDemo {
         params.put("mobile", "xxxxxxxxxxx");//接受短信的用户手机号码
         params.put("tpl_id", "166829");//您申请的短信模板ID，根据实际情况修改
         params.put("tpl_value", "#code#=666666");//您设置的模板变量，根据实际情况修改
-        params.put("key", "789811e31cb098ce731ae11f68e30b2b");//应用APPKEY(应用详细页查询)
+        params.put("key", "");//应用APPKEY(应用详细页查询)
         try {
             result = net(url, params, "GET");
             System.out.println(result);
