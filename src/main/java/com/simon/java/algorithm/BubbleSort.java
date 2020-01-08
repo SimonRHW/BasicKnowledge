@@ -30,21 +30,16 @@ public class BubbleSort {
 
     public static String bubblesort(int[] arr) {
         int tmp;
-        // 冒泡次数
         for (int a = 0; a < arr.length - 1; a++) {
             boolean flag = false;
-            // 比较未移动的
             for (int b = 0; b < arr.length - a - 1; b++) {
-                // 后面的小于前面的，则互换位置
                 if (arr[b + 1] < arr[b]) {
                     tmp = arr[b];
                     arr[b] = arr[b + 1];
                     arr[b + 1] = tmp;
-                    //有数据移动，则状态标位true
                     flag = true;
                 }
             }
-            //没有数据移动，即数组已经有序，直接退出
             if (!flag) break;
         }
         return Arrays.toString(arr);
