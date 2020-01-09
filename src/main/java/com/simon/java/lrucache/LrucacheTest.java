@@ -4,6 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class LrucacheTest {
+
     public static void main(String[] args) {
         LinkedHashMap<Integer, Integer> linkedHashMap = new LinkedHashMap<Integer, Integer>(2);
         linkedHashMap.put(1, 1);
