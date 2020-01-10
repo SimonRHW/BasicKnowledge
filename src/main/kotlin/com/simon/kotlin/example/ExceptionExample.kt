@@ -14,10 +14,9 @@ fun main() {
 
 
 fun throwException() {
-    var ex = RuntimeException("haha")
-    throw ex
+    throw RuntimeException("haha")
 }
+
 fun throwException2() {
-    var ex = RuntimeException("hehe")
-    throw ex
+    throw RuntimeException("hehe")
 }

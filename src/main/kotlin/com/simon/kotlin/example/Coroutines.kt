@@ -28,22 +28,22 @@ fun main() {
                 println("协成2执行完成 time :${System.currentTimeMillis()}")
             }
 
-//            println("request :执行的线程=${Thread.currentThread().name} :time=${System.currentTimeMillis()}")
-//            for (i in 1..10) {
-//                delay(100L)
-//                println("request:" + i)
-//            }
+            println("request :执行的线程=${Thread.currentThread().name} :time=${System.currentTimeMillis()}")
+            for (i in 1..10) {
+                delay(100L)
+                println("request:" + i)
+            }
         }
 
-//        println("runBlocking :执行的线程=${Thread.currentThread().name} :time=${System.currentTimeMillis()}")
-//        for (i in 1..10) {
-//            delay(100L)
-//            println("runBlocking:" + i)
-//        }
-//        delay(900L)
-//        request.cancel()
-//        request.cancelAndJoin()
-//        delay(2000L)
+        println("runBlocking :执行的线程=${Thread.currentThread().name} :time=${System.currentTimeMillis()}")
+        for (i in 1..10) {
+            delay(100L)
+            println("runBlocking:" + i)
+        }
+        delay(900L)
+        request.cancel()
+        request.cancelAndJoin()
+        delay(2000L)
     }
-//    println("main :执行的线程=${Thread.currentThread().name} :time=${System.currentTimeMillis()}")
+    println("main :执行的线程=${Thread.currentThread().name} :time=${System.currentTimeMillis()}")
 }

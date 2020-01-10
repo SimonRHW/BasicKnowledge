@@ -1,4 +1,4 @@
-package com.simon.kotlin.test
+package com.simon.kotlin.example
 
 fun main() {
     val string = "I am Kotlin"
