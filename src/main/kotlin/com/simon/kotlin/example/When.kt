@@ -3,7 +3,7 @@ package com.simon.kotlin.example
 /**
  * @author Simon
  * @date 2019/8/14
- * Function:
+ * desc: 模式匹配
  */
 
 fun main(){

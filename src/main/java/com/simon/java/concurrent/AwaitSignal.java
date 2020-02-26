@@ -22,6 +22,7 @@ public class AwaitSignal {
 
     static class waiter implements Runnable {
 
+        @Override
         public void run() {
             lock.lock();
             try {
@@ -42,6 +43,7 @@ public class AwaitSignal {
 
     static class signaler implements Runnable {
 
+        @Override
         public void run() {
             lock.lock();
             try {

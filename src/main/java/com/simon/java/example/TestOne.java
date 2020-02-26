@@ -1,4 +1,4 @@
-package com.simon.java.test;
+package com.simon.java.example;
 
 public class TestOne {
     private static final int i = 75;

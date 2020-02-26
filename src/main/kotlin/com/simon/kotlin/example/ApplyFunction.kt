@@ -1,6 +1,6 @@
 package com.simon.kotlin.example
 
-import com.simon.kotlin.bean.User
+import com.simon.kotlin.bean.Users
 
 /**
  * apply 函数：返回对象本身
@@ -9,7 +9,7 @@ import com.simon.kotlin.bean.User
  * 3、可以统一做判空处理
  */
 fun main() {
-    val user = User()
+    val user = Users()
     user.name = "simon"
     user.surname = "ren"
     user.email = "simon@gmail.com"

@@ -1,6 +1,6 @@
 package com.simon.kotlin.example
 
-import com.simon.kotlin.bean.User
+import com.simon.kotlin.bean.Users
 
 /**
  * @author Simon
@@ -8,7 +8,7 @@ import com.simon.kotlin.bean.User
  * Function:
  */
 fun main(){
-    val user = User()
+    val user = Users()
     user.name = "simon"
     user.surname = "ren"
     user.email= "simon@gmail.com"

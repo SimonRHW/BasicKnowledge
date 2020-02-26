@@ -1,4 +1,4 @@
-package com.simon.java.utils;
+package com.simon.java.functiontest;
 
 import java.util.Date;
 

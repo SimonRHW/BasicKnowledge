@@ -1,12 +1,12 @@
 package com.simon.kotlin.example
 
-import com.simon.kotlin.bean.User
+import com.simon.kotlin.bean.Users
 
 /**
  * also函数：返回值 = 传入的对象的本身
  */
 fun main() {
-    val user = User()
+    val user = Users()
     user.name = "simon"
     user.surname = "ren"
     user.email = "simon@gmail.com"
