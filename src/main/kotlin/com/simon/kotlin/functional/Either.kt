@@ -35,13 +35,15 @@ sealed class Either<out L, out R> {
      * Returns true if this is a Right, false otherwise.
      * @see Right
      */
-    val isRight get() = this is Right<R>
+    val isRight
+        get() = this is Right<R>
 
     /**
      * Returns true if this is a Left, false otherwise.
      * @see Left
      */
-    val isLeft get() = this is Left<L>
+    val isLeft
+        get() = this is Left<L>
 
     /**
      * Creates a Left type.

@@ -1,10 +1,12 @@
 package com.simon.kotlin.bean
 
+
 /**
  * @author Simon
  * Desc ：
  */
 
+//data class User(var name:String,var age:Int,var email:String)
 class User(
     val name: String = "simon",
     val age: Int = 18,
