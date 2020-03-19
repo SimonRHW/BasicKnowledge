@@ -8,6 +8,6 @@ import com.simon.kotlin.bean.User
  */
 
 fun main() {
-    val user = User("test", 20, "hi")
-    println(user.name)
+   var str = ""
+    print(str.isNullOrEmpty())
 }
