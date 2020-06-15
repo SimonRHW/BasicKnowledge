@@ -1,4 +1,4 @@
-package com.simon.java.concurrent;
+package com.simon.java.juc;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

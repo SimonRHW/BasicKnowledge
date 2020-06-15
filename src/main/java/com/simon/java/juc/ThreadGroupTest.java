@@ -1,4 +1,4 @@
-package com.simon.java.concurrent;
+package com.simon.java.juc;
 
 /**
  * 线程组是为了方便线程的管理
