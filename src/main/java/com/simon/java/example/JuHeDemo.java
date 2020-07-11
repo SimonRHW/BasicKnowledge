@@ -17,7 +17,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 
-public class JuheDemo {
+public class JuHeDemo {
 
     public static final String DEF_CHATSET = "UTF-8";
     public static final int DEF_CONN_TIMEOUT = 30000;

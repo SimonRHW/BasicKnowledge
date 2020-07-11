@@ -1,16 +1,47 @@
 package com.simon.java.collection;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Stack;
-import java.util.Vector;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class CollectionTest {
 
     public static void main(String[] args) {
-        Vector vector = new Vector();
-        ArrayList list = new ArrayList();
-        Stack stack = new Stack();
-        HashMap hashMap = new HashMap<>();
+        testLinkHashMap();
+    }
+
+    public static void testLinkHashMap() {
+
+        LinkedHashMap<String, String> accessOrderedMap = new LinkedHashMap<String, String>(16, 0.75F, true) {
+            @Override
+            protected boolean removeEldestEntry(Map.Entry eldest) {
+                return size() > 3;
+            }
+        };
+
+        accessOrderedMap.put("1", "haha");
+        accessOrderedMap.put("2", "hehe");
+        accessOrderedMap.put("3", "heihei");
+
+        accessOrderedMap.forEach((k, v) -> {
+            System.out.println(k + ":" + v);
+
+        });
+        accessOrderedMap.get("2");
+        accessOrderedMap.get("2");
+        accessOrderedMap.get("3");
+
+        System.out.println("-----");
+        accessOrderedMap.forEach((k, v) -> {
+            System.out.println(k + ":" + v);
+
+        });
+        accessOrderedMap.put("4", "hihi");
+
+        System.out.println("-----");
+        accessOrderedMap.forEach((k, v) -> {
+            System.out.println(k + ":" + v);
+        });
+
+
     }
 }

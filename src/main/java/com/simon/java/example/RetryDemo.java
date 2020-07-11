@@ -1,6 +1,7 @@
 package com.simon.java.example;
 
 public class RetryDemo {
+
     // 最长延迟间隔，单位是毫秒
     private static int MAX_WAIT_INTERVAL = 100000;
     // 最大重试次数
@@ -43,14 +44,12 @@ public class RetryDemo {
                     retry = true;
                 } else if (Results.SERVER_ERROR == result) {
                     retry = true;
-                }
-                else {
+                } else {
                     retry = false;
                 }
 
             } while (retry && (retries++ < MAX_RETRIES));
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
         }
     }
 

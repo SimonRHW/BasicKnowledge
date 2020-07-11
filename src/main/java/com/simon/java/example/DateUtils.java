@@ -1,10 +1,29 @@
-package com.simon.java.functiontest;
+package com.simon.java.example;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateUtils {
 
+    public static void main(String args[]) {
+        System.out.println(isValidDate("2019-07-15 16:00:00"));
+        System.out.println(System.currentTimeMillis());
+    }
+
+    private static boolean isValidDate(String str) {
+        boolean convertSuccess = true;
+        //2019-05-29 03:00:05
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+        try {
+            format.setLenient(true);
+            format.parse(str);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            convertSuccess = false;
+        }
+        return convertSuccess;
+    }
 
     public static boolean isToday(long time) {
         Date date = new Date(time);
@@ -35,5 +54,12 @@ public class DateUtils {
         }
         // 转换时分秒 00:00:00
         return (hour >= 10 ? hour : "0" + hour) + ":" + (minute >= 10 ? minute : "0" + minute) + ":" + (second >= 10 ? second : "0" + second);
+    }
+
+    public static void testDate() {
+        Date ss = new Date();
+        System.out.println("一般日期输出：" + ss);
+        System.out.println("时间戳：" + ss.getTime());
+        System.out.println(DateUtils.isToday(ss.getTime()));
     }
 }
