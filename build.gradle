@@ -76,6 +76,8 @@ dependencies {
     //guava
     implementation 'com.google.guava:guava:28.0-jre'
 
+    implementation 'com.squareup:javapoet:1.11.1'
+
     implementation 'org.apache.commons:commons-lang3:3.6'
 
     implementation 'com.google.dagger:dagger:2.24'
