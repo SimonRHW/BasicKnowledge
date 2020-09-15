@@ -1,4 +1,4 @@
-package com.simon.java.nio;
+package com.simon.java.io.nio;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * 这些是Java NIO中最重要的通道的实现：
+ * 这些是Java NIO中最重要的通道的实现
  * <p>
  * FileChannel
  * DatagramChannel
@@ -21,7 +21,7 @@ import java.nio.channels.FileChannel;
  * <p>
  * ServerSocketChannel可以监听新进来的TCP连接，像Web服务器那样。对每一个新进来的连接都会创建一个SocketChannel。
  */
-public class ChannelTemp {
+public class ChannelDemo {
 
     public static void main(String[] args) {
         try {

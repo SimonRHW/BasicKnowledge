@@ -9,7 +9,6 @@ public class Either<L, R> {
     private R right = null;
 
     private Either(L left, R right) {
-
     }
 
     public L getLeft() {
@@ -26,6 +25,10 @@ public class Either<L, R> {
 
     public boolean isRight() {
         return right != null;
+    }
+
+    public static <L, R> Either<L, R> left(L left) {
+        return new Either<L, R>(left, null);
     }
 
     public static <L, R> Either<L, R> right(R right) {
