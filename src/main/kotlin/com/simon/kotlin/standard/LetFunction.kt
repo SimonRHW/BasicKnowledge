@@ -1,4 +1,4 @@
-package com.simon.kotlin.example
+package com.simon.kotlin.standard
 
 import com.simon.kotlin.bean.Users
 

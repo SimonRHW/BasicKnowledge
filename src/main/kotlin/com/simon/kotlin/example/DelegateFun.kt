@@ -1,6 +1,4 @@
-package com.simon.kotlin.bean
-
-import com.simon.kotlin.example.printlnClassName
+package com.simon.kotlin.example
 
 /**
  * @author Simon
