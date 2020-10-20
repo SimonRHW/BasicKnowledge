@@ -7,7 +7,7 @@ package com.simon.java.bean;
 public class User {
     private String name;
     private int age;
-    private String email;
+    public String email;
 
     public User(String name, int age, String email) {
         this.name = name;
@@ -22,5 +22,14 @@ public class User {
 
     public User(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

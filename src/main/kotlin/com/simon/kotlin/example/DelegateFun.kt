@@ -39,9 +39,9 @@ fun main() {
     val pair = Pair(20.1, 1)
     val data1 = pair.first
     val data2 = pair.second
-    printlnClassName(data1)
-    printlnClassName(data2)
+//    printlnClassName(data1)
+//    printlnClassName(data2)
     val (data3,data4)= Pair("hehe",100)
-    printlnClassName(data3)
-    printlnClassName(data4)
+//    printlnClassName(data3)
+//    printlnClassName(data4)
 }
