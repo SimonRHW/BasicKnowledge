@@ -30,14 +30,14 @@ public class CollectionTest {
 
         });
         accessOrderedMap.get("2");
-        accessOrderedMap.get("2");
-        accessOrderedMap.get("3");
+        accessOrderedMap.get("1");
 
         System.out.println("-----");
         accessOrderedMap.forEach((k, v) -> {
             System.out.println(k + ":" + v);
 
         });
+        accessOrderedMap.get("1");
         accessOrderedMap.put("4", "hihi");
 
         System.out.println("-----");
