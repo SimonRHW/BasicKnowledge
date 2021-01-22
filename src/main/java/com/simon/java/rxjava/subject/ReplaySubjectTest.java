@@ -19,7 +19,7 @@ public class ReplaySubjectTest {
 
         ReplaySubject<Integer> replaySubject;
         replaySubject = ReplaySubject.create();
-        replaySubject = ReplaySubject.createWithSize(4);
+//        replaySubject = ReplaySubject.createWithSize(4);
         replaySubject.onNext(0);
         replaySubject.onNext(1);
         replaySubject.onNext(2);

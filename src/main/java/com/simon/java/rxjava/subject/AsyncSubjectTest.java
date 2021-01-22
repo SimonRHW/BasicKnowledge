@@ -12,9 +12,9 @@ public class AsyncSubjectTest {
 
     public static void main(String[] args) {
         AsyncSubject<String> asyncSubject = AsyncSubject.create();
-        asyncSubject.onNext("0");
-        asyncSubject.onNext("1");
-        asyncSubject.onNext("2");
+//        asyncSubject.onNext("0");
+//        asyncSubject.onNext("1");
+//        asyncSubject.onNext("2");
 //        asyncSubject.onComplete();
 
         asyncSubject.subscribe(new Observer<String>() {
@@ -41,8 +41,29 @@ public class AsyncSubjectTest {
 
         asyncSubject.onNext("3");
         asyncSubject.onComplete();
-//        asyncSubject.onError(new IllegalArgumentException(" error"));
-    }
 
+        asyncSubject.subscribe(new Observer<String>() {
+            @Override
+            public void onSubscribe(@NotNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NotNull String s) {
+                System.out.println("onNext" + s);
+            }
+
+            @Override
+            public void onError(@NotNull Throwable e) {
+                System.out.println("onError" + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                System.out.println("onComplete");
+            }
+        });
+
+    }
 
 }
