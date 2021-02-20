@@ -1,5 +1,8 @@
 package com.simon.java.example;
 
+/**
+ * @author Simon
+ */
 public class RetryDemo {
 
     // 最长延迟间隔，单位是毫秒

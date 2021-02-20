@@ -23,7 +23,6 @@ public class SimpleLruCache {
         cacheLinkList = new DoubleLink();
     }
 
-
     /**
      * 将已缓存的数据 移到链表尾部 提升为最近使用
      *
@@ -34,7 +33,6 @@ public class SimpleLruCache {
         cacheLinkList.remove(node);
         cacheLinkList.addLast(node);
     }
-
 
     /**
      * 添加 最新的数据 到最近使用
@@ -110,7 +108,6 @@ public class SimpleLruCache {
     class Node {
         public int key, val;
         public Node prev, next;
-
         public Node(int key, int val) {
             this.key = key;
             this.val = val;
@@ -124,7 +121,6 @@ public class SimpleLruCache {
     class DoubleLink {
 
         private Node head, tail;
-
         private int size;
 
         /**
@@ -152,7 +148,6 @@ public class SimpleLruCache {
             tail.prev = node;
             size++;
         }
-
 
         /**
          * 删除 链表中的节点

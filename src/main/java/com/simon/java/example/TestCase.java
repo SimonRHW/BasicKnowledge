@@ -1,5 +1,8 @@
 package com.simon.java.example;
 
+/**
+ * @author Simon
+ */
 public class TestCase {
     private static final int i = 75;
 

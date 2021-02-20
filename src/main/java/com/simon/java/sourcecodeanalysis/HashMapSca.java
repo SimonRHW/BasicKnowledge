@@ -5,8 +5,10 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * 在 JDK 1.7 中 HashMap 是以数组加链表的形式组成的，JDK 1.8 之后新增了红黑树的组成结构，当链表大于 8 并且容量大于 64 时，链表结构会转换成红黑树结构
- * 之所以添加红黑树是因为一旦链表过长，会严重影响 HashMap 的性能，而红黑树具有快速增删改查的特点，这样就可以有效的解决链表过长时操作比较慢的问题
+ * 在 JDK 1.7 中 HashMap 是以数组加链表的形式组成的，
+ * JDK 1.8 之后新增了红黑树的组成结构，当链表大于 8 并且容量大于 64 时，
+ * 链表结构会转换成红黑树结构,之所以添加红黑树是因为一旦链表过长，会严重影响 HashMap 的性能，
+ * 而红黑树具有快速增删改查的特点，这样就可以有效的解决链表过长时操作比较慢的问题
  * HashMap三个比较重要的方法：查询、新增、扩容
  */
 public class HashMapSca {
@@ -69,31 +71,38 @@ public class HashMapSca {
             this.next = next;
         }
 
+        @Override
         public final K getKey() {
             return key;
         }
 
+        @Override
         public final V getValue() {
             return value;
         }
 
+        @Override
         public final String toString() {
             return key + "=" + value;
         }
 
+        @Override
         public final int hashCode() {
             return Objects.hashCode(key) ^ Objects.hashCode(value);
         }
 
+        @Override
         public final V setValue(V newValue) {
             V oldValue = value;
             value = newValue;
             return oldValue;
         }
 
+        @Override
         public final boolean equals(Object o) {
-            if (o == this)
+            if (o == this) {
                 return true;
+            }
             if (o instanceof Map.Entry) {
                 Map.Entry<?, ?> e = (Map.Entry<?, ?>) o;
                 if (Objects.equals(key, e.getKey()) &&

@@ -28,11 +28,9 @@ public class LruCache<K, V> {
         return cache.get(key);
     }
 
-
     public void remove(K key) {
         cache.remove(key);
     }
-
 
     public void put(K key, V value) {
         if (cache.containsKey(key)) {

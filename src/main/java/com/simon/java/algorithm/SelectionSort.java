@@ -13,11 +13,13 @@ package com.simon.java.algorithm;
 public class SelectionSort {
 
     public static void selectionSort(int[] a) {
-        int N = a.length;
-        for (int i = 0; i < N - 1; i++) {
+        int n = a.length;
+        for (int i = 0; i < n - 1; i++) {
             int min = i;
-            for (int j = i + 1; j < N; j++) {
-                if (a[j]< a[min]) min = j;
+            for (int j = i + 1; j < n; j++) {
+                if (a[j]< a[min]) {
+                    min = j;
+                }
             }
             exch(a, i, min);
         }

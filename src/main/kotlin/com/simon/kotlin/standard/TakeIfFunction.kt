@@ -11,5 +11,10 @@ fun main() {
     val inc = i.takeIf {
         it > 0
     }?.inc()
-    print(inc)
+    println(inc)
+
+    val inc2 = i.takeIf {
+        it >=0
+    }?.inc()
+    println(inc2)
 }

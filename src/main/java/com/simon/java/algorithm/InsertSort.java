@@ -1,7 +1,5 @@
 package com.simon.java.algorithm;
 
-import java.util.Arrays;
-
 /**
  * @author Simon
  * 直接插入排序

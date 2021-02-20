@@ -99,7 +99,6 @@ public class SingletonPattern {
         静态内部类写法，他跟饿汉式的方法采用的机制类似。都采用的类装载的机制，来保证我们初始化实例时只有一个线程，
         在这里JVM帮助我们保证了线程的安全性  优点与双重检查模式是一样的，但是都不能防止被反序列化成多个实例
          */
-
         private static class SingletonInstance {
             private static final Singleton singleton = new Singleton();
         }
@@ -107,7 +106,6 @@ public class SingletonPattern {
         private static Singleton getInstanceStaticInnerClass() {
             return SingletonInstance.singleton;
         }
-
 
         /*
         枚举类写法:这不仅能够避免多线程同步的问题，而且还能够防止反序列化和反射创建新的对象
@@ -124,12 +122,10 @@ public class SingletonPattern {
          */
         public enum SingletonEnum {
             INSTANCE;
-
             public void doSomething() {
 
             }
         }
-
 
     }
 

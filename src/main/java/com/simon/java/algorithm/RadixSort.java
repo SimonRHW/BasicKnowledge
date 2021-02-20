@@ -17,7 +17,9 @@ public class RadixSort {
      * @param arr	 待排序数组
      */
     public static void radixSort(int[] arr){
-        if(arr.length <= 1) return;
+        if(arr.length <= 1) {
+            return;
+        }
 
         //取得数组中的最大数，并取得位数
         int max = 0;
@@ -39,7 +41,8 @@ public class RadixSort {
 
         //从低位到高位，对每一位遍历，将所有元素分配到桶中
         for(int i = 0; i < maxDigit; i++){
-            int[] bktLen = new int[10];        //存储各个桶中存储元素的数量
+            //存储各个桶中存储元素的数量
+            int[] bktLen = new int[10];
 
             //分配：将所有元素分配到桶中
             for(int j = 0; j < arr.length; j++){

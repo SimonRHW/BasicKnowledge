@@ -17,6 +17,9 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 
+/**
+ * @author Simon
+ */
 public class JuHeDemo {
 
     public static final String DEF_CHATSET = "UTF-8";

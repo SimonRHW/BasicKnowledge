@@ -9,6 +9,8 @@ public class Either<L, R> {
     private R right = null;
 
     private Either(L left, R right) {
+        this.left = left;
+        this.right = right;
     }
 
     public L getLeft() {
@@ -34,4 +36,5 @@ public class Either<L, R> {
     public static <L, R> Either<L, R> right(R right) {
         return new Either<L, R>(null, right);
     }
+
 }
