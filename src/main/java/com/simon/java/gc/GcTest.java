@@ -1,4 +1,4 @@
-package com.simon.java.performance;
+package com.simon.java.gc;
 
 public class GcTest {
 

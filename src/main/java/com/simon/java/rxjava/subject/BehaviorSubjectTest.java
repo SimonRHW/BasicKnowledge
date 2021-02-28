@@ -41,5 +41,28 @@ public class BehaviorSubjectTest {
         behaviorSubject.onNext(1);
         behaviorSubject.onNext(2);
         behaviorSubject.onComplete();
+        behaviorSubject.onNext(3);
+        behaviorSubject.onNext(4);
+        behaviorSubject.subscribe(new Observer<Integer>() {
+            @Override
+            public void onSubscribe(@NotNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NotNull Integer integer) {
+                System.out.println("onNext " + integer);
+            }
+
+            @Override
+            public void onError(@NotNull Throwable e) {
+                System.out.println("OnError " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                System.out.println("OnComplete");
+            }
+        });
     }
 }

@@ -1,4 +1,4 @@
-package com.simon.java.EffectiveJava;
+package com.simon.java.effective;
 
 /**
  * @author Simon

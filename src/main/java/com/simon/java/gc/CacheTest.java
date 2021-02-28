@@ -1,4 +1,4 @@
-package com.simon.java.performance;
+package com.simon.java.gc;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;

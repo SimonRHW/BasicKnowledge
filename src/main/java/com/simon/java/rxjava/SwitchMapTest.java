@@ -3,10 +3,13 @@ package com.simon.java.rxjava;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.Scheduler;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * 如果是在同一线程产生数据，因为当第二个数据项来临时，第一个已经完成了，此时其和 concatMap 是完全一致的。
@@ -16,13 +19,14 @@ public class SwitchMapTest {
 
     public static void main(String[] args) {
         Observable.just(1, 2, 3, 4, 5)
+                .observeOn(Schedulers.trampoline())
                 .switchMap(new Function<Integer, ObservableSource<String>>() {
                     @Override
                     public ObservableSource<String> apply(@NotNull Integer integer) throws Exception {
 //                        return Observable.just("switchmap:" + integer).subscribeOn(Schedulers.newThread());
                         return Observable.just("switchmap:" + integer);
                     }
-                }).observeOn(Schedulers.trampoline())
+                })
                 .subscribe(new Observer<String>() {
                     @Override
                     public void onSubscribe(@NotNull Disposable d) {
