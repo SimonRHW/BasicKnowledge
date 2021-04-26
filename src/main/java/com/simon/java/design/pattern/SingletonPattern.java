@@ -31,7 +31,6 @@ public class SingletonPattern {
 
         /*
         懒汉式写法，在getSingleton调用时才会去实例化我们的对象，起到懒加载效果，但是只能在单线程中使用。
-
         当一个线程计入到 if (singleton != null) 判断语句时，还没来的及往下执行，另一个线程也通过了这个判断语句，这时就会多次创建实例
          */
         private static Singleton getInstance() {
