@@ -15,7 +15,7 @@ fun main() {
 //    Thread.sleep(1500)
 //    println(checkAppAddTime("test"))
     val childrenAppList = listOf(User("1", 1, "haha"), User("2", 2, "heihei"), User("3", 3))
-    println(childrenAppList.maxWith(compareBy { it.email }))
+    println(childrenAppList.maxWithOrNull(compareBy { it.email }))
 
 }
 
