@@ -1,8 +1,5 @@
 package com.simon.java.leetcode;
 
-import java.util.HashMap;
-import java.util.Stack;
-
 public class LeetCode2 {
 
 

@@ -45,6 +45,5 @@ public class CollectionTest {
             System.out.println(k + ":" + v);
         });
 
-
     }
 }

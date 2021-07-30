@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * ThreadLocal 本身并不存储值， ThreadLocalMap 是使用ThreadLocal的弱引用作为key的。
+ * ThreadLocal 本身并不存储值， ThreadLocalMap是使用ThreadLocal的弱引用作为key的。
  * 一个对象若只剩下弱引用，则该对象在GC是就会被回收。
  * 内存泄漏解决方法：调用remove  默认是值传递
  */

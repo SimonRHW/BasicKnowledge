@@ -10,11 +10,11 @@ import java.lang.reflect.Method;
  */
 public class TestClass {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException {
         Object object = null;
         try {
-            Class clazz = Class.forName("com.simon.java.annotation.NoBug");
-            Constructor constructor = clazz.getConstructor();
+            Class<?> clazz = Class.forName("com.simon.java.annotation.NoBug");
+            Constructor<?> constructor = clazz.getConstructor();
             object = constructor.newInstance();
             Method[] method = clazz.getDeclaredMethods();
             StringBuilder log = new StringBuilder();
@@ -38,15 +38,8 @@ public class TestClass {
             log.append(errorTimes);
             log.append(" error.");
             System.out.println(log.toString());
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (InstantiationException | InvocationTargetException
+                | ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
     }

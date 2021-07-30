@@ -8,17 +8,17 @@ public class NoBug {
     }
 
     @TestAnnotation
-    public void jiafa() {
+    public void add() {
         System.out.println("1+1=" + 1 + 1);
     }
 
     @TestAnnotation
-    public void jianfa() {
+    public void reduce() {
         System.out.println("1-1=" + (1 - 1));
     }
 
     @TestAnnotation
-    public void chengfa() {
+    public void multiplyExact() {
         System.out.println("3 x 5=" + 3 * 5);
     }
 

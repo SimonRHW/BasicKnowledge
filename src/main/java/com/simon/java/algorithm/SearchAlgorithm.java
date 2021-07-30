@@ -63,6 +63,10 @@ public class SearchAlgorithm {
     }
 
 
+    /**
+     * 广度优先遍历
+     * @param root
+     */
     public static void levelOrderTraversal(TreeNode root) {
         System.out.println("levelOrderTraversal start");
         if (null == root) {

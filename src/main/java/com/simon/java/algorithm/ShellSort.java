@@ -19,7 +19,6 @@ public class ShellSort {
         int gap = 1, i, j, len = arr.length;
         int temp;
         while (gap < len / 3){
-            // <O(n^(3/2)) by Knuth,1973>: 1, 4, 13, 40, 121, ...
             gap = gap * 3 + 1;
         }
         for (; gap > 0; gap /= 3) {

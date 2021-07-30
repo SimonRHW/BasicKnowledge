@@ -26,27 +26,8 @@ public class HashMapSca {
         之后线程 t2 重新 rehash 之后链表的顺序被反转，链表的位置变成了 key(5) → key(7) → key(3)，
         其中 “→” 用来表示下一个元素。当 t1 重新获得执行权之后，先执行 newTalbe[i] = e 把 key(3) 的 next 设置为 key(7)，
         而下次循环时查询到 key(7) 的 next 元素为 key(3)，于是就形成了 key(3) 和 key(7) 的循环引用，因此就导致了死循环的发生
-
         当然发生死循环的原因是 JDK 1.7 链表插入方式为首部倒序插入，这个问题在 JDK 1.8 得到了改善，变成了尾部正序插入；
-        因为 HashMap 本身就是非线程安全的，如果要在多线程下，建议使用 ConcurrentHashMap 替代
-
-        void transfer(Entry[] newTable, boolean rehash) {
-        int newCapacity = newTable.length;
-        for (Entry<K,V> e : table) {
-            while(null != e) {
-                Entry<K,V> next = e.next; // 线程一执行此处
-                if (rehash) {
-                    e.hash = null == e.key ? 0 : hash(e.key);
-                }
-                int i = indexFor(e.hash, newCapacity);
-                e.next = newTable[i];
-                newTable[i] = e;
-                e = next;
-            }
-            }
-        }
         */
-
 
     }
 

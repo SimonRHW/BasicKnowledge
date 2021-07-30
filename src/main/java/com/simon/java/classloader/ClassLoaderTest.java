@@ -7,6 +7,6 @@ package com.simon.java.classloader;
  */
 public class ClassLoaderTest {
     public  void printTest(){
-        System.out.println("Test");
+        System.out.println("ClassLoaderTest");
     }
 }

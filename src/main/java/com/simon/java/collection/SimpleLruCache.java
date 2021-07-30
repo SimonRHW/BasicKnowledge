@@ -11,9 +11,9 @@ public class SimpleLruCache {
     /**
      * 对于某一个 key，我们可以通过哈希表快速定位到链表中的节点，从而取得对应 val。
      */
-    private HashMap<Integer, Node> queryMap;
+    private final HashMap<Integer, Node> queryMap;
 
-    private DoubleLink cacheLinkList;
+    private final DoubleLink cacheLinkList;
 
     private int capacity;
 
@@ -82,7 +82,9 @@ public class SimpleLruCache {
     /**
      * 分两种情况：
      * 一，若key存在，修改key对应的value 并将该数据提升为最近使用
-     * 二，若key不存在，需要插入新的key值数据，插入过程中需要判断容量是否已满，若未满，插入数据为最近使用的数据  ，已满删除最久未使用的数据在插入
+     * 二，若key不存在，需要插入新的key值数据，插入过程中需要判断容量是否已满，
+     * 未满：插入数据为最近使用的数据
+     * 已满：删除最久未使用的数据在插入
      *
      * @param key   数据的键值
      * @param value 缓存的数据
@@ -120,7 +122,8 @@ public class SimpleLruCache {
      */
     class DoubleLink {
 
-        private Node head, tail;
+        private final Node head;
+        private final Node tail;
         private int size;
 
         /**

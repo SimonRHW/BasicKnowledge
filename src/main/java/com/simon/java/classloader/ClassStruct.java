@@ -23,7 +23,8 @@ import java.io.Serializable;
  *
  * java中 String 字符串的长度有限制吗？
  *
- * 而我们在java代码中声明的String字符串最终在class文件中的存储格式就 CONSTANT_utf8_info。因此一个字符串最大长度也就是u2所能代表的最大值65536个，
+ * 而我们在java代码中声明的String字符串最终在class文件中的存储格式就 CONSTANT_utf8_info。
+ * 因此一个字符串最大长度也就是u2所能代表的最大值65536个，
  * 但是需要使用2个字节来保存 null 值，因此一个字符串的最大长度为 65536 - 2 = 65534
  */
 public class ClassStruct implements Serializable, Cloneable {
