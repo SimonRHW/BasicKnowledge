@@ -1,9 +1,7 @@
 package com.simon.kotlin.coroutines
 
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.runBlocking
 
 /**
@@ -41,6 +39,25 @@ fun main() = runBlocking<Unit> {
     flow.collect { println(it) }
     println("Calling collect again...")
     flow.collect { println(it) }
+
+    var somePojo = SomePojo("Something Different")
+    val mutableStateFlow = MutableStateFlow(somePojo)
+    println("INITIAL: ${mutableStateFlow.value}")
+    somePojo = somePojo.copy(name = "copy update")
+    println("CURRENT: ${mutableStateFlow.value}")
+    mutableStateFlow.value = somePojo
+    println("UPDATED: ${mutableStateFlow.value}")
+    mutableStateFlow.collect {
+        println("collect: $it")
+    }
+    somePojo = SomePojo("last copy")
+    mutableStateFlow.emit(somePojo)
+    println("LAST: ${mutableStateFlow.value}")
+    mutableStateFlow.emit(SomePojo("last new"))
+    println("END: ${mutableStateFlow.value}")
+    mutableStateFlow.collect {
+        println("collect: $it")
+    }
 }
 
 fun simple(): Flow<Int> = flow {
@@ -50,5 +67,7 @@ fun simple(): Flow<Int> = flow {
         emit(i)
     }
 }
+
+data class SomePojo(val name: String = "placeholder")
 
 

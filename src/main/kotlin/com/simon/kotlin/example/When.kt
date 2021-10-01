@@ -17,7 +17,6 @@ fun main(){
 class Train (val  data : Number){
     override fun toString(): String {
         return when(data){
-            null,0 ->"empty"
             1 -> "tiny"
             in  2..10 -> "small"
             is  Int -> "big int"

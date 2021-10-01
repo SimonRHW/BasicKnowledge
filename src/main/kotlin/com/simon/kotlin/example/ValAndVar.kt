@@ -1,6 +1,6 @@
 package com.simon.kotlin.example
 
-public fun main() {
+fun main() {
     val arrayVal = intArrayOf(1, 2, 3)
     //Val cannot be reassigned
     //arrayVal = intArrayOf(2,3,4)
@@ -18,7 +18,7 @@ public fun main() {
 }
 
 var a = 1
-public fun count(i: Int) {
+fun count(i: Int) {
     a += 1
     println(i + a)
 }

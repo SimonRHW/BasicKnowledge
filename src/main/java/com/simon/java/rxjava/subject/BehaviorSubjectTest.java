@@ -26,7 +26,7 @@ public class BehaviorSubjectTest {
 
             @Override
             public void onNext(@NotNull Integer integer) {
-                System.out.println("onNext " + integer);
+                System.out.println("onNext1 " + integer);
             }
 
             @Override
@@ -41,7 +41,7 @@ public class BehaviorSubjectTest {
         });
         behaviorSubject.onNext(1);
         behaviorSubject.onNext(2);
-        behaviorSubject.onComplete();
+//        behaviorSubject.onComplete();
         behaviorSubject.onNext(3);
         behaviorSubject.onNext(4);
         behaviorSubject.subscribe(new Observer<Integer>() {
@@ -52,7 +52,7 @@ public class BehaviorSubjectTest {
 
             @Override
             public void onNext(@NotNull Integer integer) {
-                System.out.println("onNext " + integer);
+                System.out.println("onNext2 " + integer);
             }
 
             @Override
@@ -65,5 +65,7 @@ public class BehaviorSubjectTest {
                 System.out.println("OnComplete");
             }
         });
+        behaviorSubject.onNext(5);
+        behaviorSubject.onNext(6);
     }
 }

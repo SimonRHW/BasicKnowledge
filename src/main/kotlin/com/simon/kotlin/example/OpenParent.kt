@@ -6,7 +6,7 @@ open class OpenParent {
 
 class SubClass : OpenParent() {
     override var x = 20
-    public fun println() {
+    fun println() {
         println("x = ${x}")
         println("super.x = ${super.x}")
     }

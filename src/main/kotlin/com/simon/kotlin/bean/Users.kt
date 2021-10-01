@@ -16,7 +16,17 @@ class Users {
     private fun isEmailValid(value: String): Boolean {
         return isEmail
     }
+}
 
-    //全局可见
-    fun eat() {}
+fun main(){
+    val user = Users()
+    user.name = "simon"
+    user.surname = "ren"
+    user.email= "simon@gmail.com"
+    println(user.name)
+    println(user.surname)
+    println("${user.email}one")
+    user.isEmail  =true
+    user.email= "ren@gmail.com"
+    println("${user.email}two")
 }

@@ -9,7 +9,6 @@ fun main() {
     } catch (ex: Exception) {
         println(ex.message)
     }
-    println("111")
 }
 
 
