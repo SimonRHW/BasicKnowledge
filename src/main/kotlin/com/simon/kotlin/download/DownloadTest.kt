@@ -36,6 +36,7 @@ object DownloadTest {
             override fun onResponse(call: Call, response: Response) {
                 println("response code " + response.code)
                 if (response.code != 200) {
+                    callBack.error(IllegalArgumentException("url error"),url,destFileDir,code)
                     return
                 }
                 val buf = ByteArray(2048)
@@ -94,8 +95,8 @@ object DownloadTest {
 
 fun main() {
     DownloadTest.download(
-        "https://audi-approval-market.jidouauto.com/html/2021-11-29/263b931db0014790a2a407c53e5812a7.html",
-//        "https://cdn-public-live-audi.jidouauto.com/html/2021-11-29/263b931db0014790a2a407c53e5812a7.html",
+//        "https://audi-approval-market.jidouauto.com/html/2021-11-29/263b931db0014790a2a407c53e5812a7.html",
+        "https://cdn-public-live-audi.jidouauto.com/html/2021-11-29/263b931db0014790a2a407c53e5812a7.html",
         "src/main/resources",
         29L,
         object : DownloadTest.DownloadCallBack {
