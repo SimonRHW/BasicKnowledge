@@ -2,6 +2,7 @@ package com.simon.kotlin.coroutines
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.runBlocking
 
 /**
@@ -60,7 +61,7 @@ fun main() = runBlocking<Unit> {
     }
 }
 
-fun simple(): Flow<Int> = flow {
+fun simple(): Flow<Any> = flow {
     println("Flow started")
     for (i in 1..3) {
         delay(100)

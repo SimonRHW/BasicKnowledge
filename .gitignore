@@ -2,6 +2,8 @@
 *.apk
 *.ap_
 *.bin
+.DS_Store
+*.html
 
 
 # Java class files
@@ -54,3 +56,4 @@ captures/
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 
+/src/main/kotlin/com/simon/kotlin/work/
