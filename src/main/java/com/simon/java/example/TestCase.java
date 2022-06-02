@@ -7,9 +7,8 @@ public class TestCase {
     private static final int i = 75;
 
     public static void main(String[] args) {
-        testMiSra();
-        int i = Math.round(1);
-        String java = "I am Java";
+        String charCharU0020StringValueOfVmPaymentRecordsAmount = (('￥') + ('\u0020')) + "0.01";
+        System.out.println(charCharU0020StringValueOfVmPaymentRecordsAmount);
     }
 
     public static boolean add(int i) {
