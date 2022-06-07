@@ -14,11 +14,12 @@ class DaggerTest {
     lateinit var apiThreeServices: ApiThreeServices
 
     fun doSomeThing() {
-        apiServices.doPrintln()
-
-        apiTwoServices.doPrintln()
-
-        apiThreeServices.doPrintln()
+        println("doSomeThing")
+//        apiServices.doPrintln()
+//
+//        apiTwoServices.doPrintln()
+//
+//        apiThreeServices.doPrintln()
     }
 
 }
