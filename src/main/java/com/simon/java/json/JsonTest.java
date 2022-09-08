@@ -25,7 +25,7 @@ public class JsonTest {
     }
 
     public static void main(String[] args) {
-        String json = readJsonFile("src/main/resourse/test.json");
+        String json = readJsonFile("src/main/resources/test.json");
         System.out.println(json);
         System.out.println("\n\n\n");
         System.out.println(getSignJson(json, SIGN_KEY));

@@ -15,7 +15,7 @@ public class IOTest {
 
         try {
              new FileManager().download("src/main/resources/sample.txt","src/main/resources/test.log" );
-            FileInputStream fileInputStream = new FileInputStream("src/main/resourse/test.log");
+            FileInputStream fileInputStream = new FileInputStream("src/main/resources/test.log");
             int read = fileInputStream.read();
             System.out.println("read"+read);
 
