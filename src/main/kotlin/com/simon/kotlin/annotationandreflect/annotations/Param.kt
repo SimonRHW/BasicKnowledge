@@ -1,4 +1,4 @@
-package com.simon.kotlin.annotationandreflect
+package com.simon.kotlin.annotationandreflect.annotations
 
 @Target(AnnotationTarget.VALUE_PARAMETER)
 @Retention(AnnotationRetention.RUNTIME)

@@ -1,4 +1,4 @@
-package com.simon.kotlin.coroutines
+package com.simon.kotlin.coroutines.flow
 
 fun main(){
     flowOf("Custom flow!")

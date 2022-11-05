@@ -15,11 +15,9 @@ class DaggerTest {
 
     fun doSomeThing() {
         println("doSomeThing")
-//        apiServices.doPrintln()
-//
-//        apiTwoServices.doPrintln()
-//
-//        apiThreeServices.doPrintln()
+        apiServices.doPrintln()
+        apiTwoServices.doPrintln()
+        apiThreeServices.doPrintln()
     }
 
 }

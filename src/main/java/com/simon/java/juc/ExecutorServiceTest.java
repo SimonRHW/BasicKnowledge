@@ -9,17 +9,14 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class ExecutorServiceTest {
 
     public static void main(String[] args) {
-
         cachedThreadPoolOOM();
-
     }
 
     public static void cachedThreadPoolOOM() {
         ThreadPoolExecutor fixedThreadPool = (ThreadPoolExecutor) Executors.newCachedThreadPool();
-
         for (int i = 1; i <= 1000000; i++) {
             final int taskId = i;
-            System.out.println("execute tast:" + taskId);
+            System.out.println("execute task:" + taskId);
             fixedThreadPool.execute(new Runnable() {
                 @Override
                 public void run() {

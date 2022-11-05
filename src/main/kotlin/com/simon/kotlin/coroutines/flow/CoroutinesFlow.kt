@@ -1,4 +1,4 @@
-package com.simon.kotlin.coroutines
+package com.simon.kotlin.coroutines.flow
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
@@ -48,9 +48,9 @@ fun main() = runBlocking<Unit> {
     println("CURRENT: ${mutableStateFlow.value}")
     mutableStateFlow.value = somePojo
     println("UPDATED: ${mutableStateFlow.value}")
-    mutableStateFlow.collect {
-        println("collect: $it")
-    }
+//    mutableStateFlow.collect {
+//        println("collect: $it")
+//    }
     somePojo = SomePojo("last copy")
     mutableStateFlow.emit(somePojo)
     println("LAST: ${mutableStateFlow.value}")

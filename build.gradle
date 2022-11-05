@@ -64,7 +64,9 @@ dependencies {
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kotlinx_coroutines"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kotlinx_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx3:$kotlinx_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:$kotlinx_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-jdk9:$kotlinx_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-reactive:$kotlinx_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlinx_coroutines"
 

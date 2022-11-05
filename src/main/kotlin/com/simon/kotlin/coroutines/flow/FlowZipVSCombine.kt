@@ -1,4 +1,4 @@
-package com.simon.kotlin.coroutines
+package com.simon.kotlin.coroutines.flow
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*

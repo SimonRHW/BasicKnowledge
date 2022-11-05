@@ -11,6 +11,6 @@ fun main(){
     }
 
     repeat(0) {
-        error("We should not get here!")
+        error("nothing should not get here!")
     }
 }

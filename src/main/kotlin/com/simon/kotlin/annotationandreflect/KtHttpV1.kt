@@ -1,11 +1,13 @@
 package com.simon.kotlin.annotationandreflect
 
-
 import com.google.gson.Gson
+import com.simon.kotlin.annotationandreflect.annotations.Field
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import java.lang.reflect.InvocationHandler
 import java.lang.reflect.Method
 import java.lang.reflect.Proxy
+import kotlin.reflect.jvm.javaMethod
 
 /**
  * 任何支持Get API
@@ -15,15 +17,15 @@ import java.lang.reflect.Proxy
 interface ApiService {
     @GET("/repo")
     fun repos(
-        @Param("lang") lang: String,
-        @Param("since") since: String,
+        @Field("lang") lang: String,
+        @Field("since") since: String
     ): RepoList
 }
 
 data class RepoList(
     var count: Int?,
     var items: List<Repo>?,
-    var msg: String?,
+    var msg: String?
 )
 
 data class Repo(
@@ -34,7 +36,7 @@ data class Repo(
     var lang: String?,
     var repo: String?,
     var repo_link: String?,
-    var stars: String?,
+    var stars: String?
 )
 
 object KtHttpV1 {
@@ -62,18 +64,20 @@ object KtHttpV1 {
 
     private fun invoke(path: String, method: Method, args: Array<Any>): Any? {
         if (method.parameterAnnotations.size != args.size) return null
+
         var url = path
         val parameterAnnotations = method.parameterAnnotations
         for (i in parameterAnnotations.indices) {
             for (parameterAnnotation in parameterAnnotations[i]) {
-                if (parameterAnnotation is Param) {
+                if (parameterAnnotation is Field) {
                     val key = parameterAnnotation.value
                     val value = args[i].toString()
-                    url += if (!url.contains("?")) {
-                        "?$key=$value"
+                    if (!url.contains("?")) {
+                        url += "?$key=$value"
                     } else {
-                        "&$key=$value"
+                        url += "&$key=$value"
                     }
+
                 }
             }
         }
@@ -88,6 +92,7 @@ object KtHttpV1 {
         val body = response.body
         val json = body?.string()
         val result = gson.fromJson<Any?>(json, genericReturnType)
+
         return result
     }
 }
@@ -96,4 +101,15 @@ fun main() {
     val api: ApiService = KtHttpV1.create(ApiService::class.java)
     val data: RepoList = api.repos(lang = "Kotlin", since = "weekly")
     println(data)
+}
+
+/**
+ * 只是为了模拟Java动态代理，实际更复杂
+ */
+class ApiImpl(val h: InvocationHandler) : Proxy(h), ApiService {
+    override fun repos(lang: String, since: String): RepoList {
+        val method: Method = ::repos.javaMethod!!
+        val args = arrayOf(lang, since)
+        return h.invoke(this, method, args) as RepoList
+    }
 }

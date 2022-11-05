@@ -10,14 +10,14 @@ public class LeetCode1 {
         for (int item : sum) {
             System.out.println(item);
         }
-
     }
 
     public static int[] sum(int[] nums, int target) {
         int[] res = new int[2];
         HashMap<Integer, Integer> hashMap = new HashMap<>();
-        if (nums == null || nums.length <= 0)
+        if (nums == null || nums.length == 0) {
             return res;
+        }
         for (int i = 0; i < nums.length - 1; i++) {
             int num = nums[i];
             int temp = target - num;

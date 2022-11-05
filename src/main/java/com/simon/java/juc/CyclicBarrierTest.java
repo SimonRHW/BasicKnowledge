@@ -10,14 +10,14 @@ public class CyclicBarrierTest {
         int N = 4;
         CyclicBarrier barrier = new CyclicBarrier(N);
         for (int i = 0; i < N; i++) {
-            new Writer(barrier).start();
+            new Worker(barrier).start();
         }
     }
 
-    static class Writer extends Thread {
+    static class Worker extends Thread {
         private CyclicBarrier cyclicBarrier;
 
-        public Writer(CyclicBarrier cyclicBarrier) {
+        public Worker(CyclicBarrier cyclicBarrier) {
             this.cyclicBarrier = cyclicBarrier;
         }
 

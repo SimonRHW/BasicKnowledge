@@ -1,4 +1,4 @@
-package com.simon.kotlin.coroutines
+package com.simon.kotlin.coroutines.flow
 
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.flowOf

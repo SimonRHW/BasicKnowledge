@@ -49,11 +49,9 @@ fun main3() = runBlocking {
             delay(500L)
         }
     }
-
 }
 
 fun main4() = runBlocking<Unit> {
-//sampleStart
     val time = measureTimeMillis {
         val one = async { doSomethingUsefulOne() }
         val two = async { doSomethingUsefulTwo() }
@@ -62,7 +60,6 @@ fun main4() = runBlocking<Unit> {
         println("The answer is ${one.await() + two.await()}")
     }
     println("Completed in $time ms")
-//sampleEnd
 }
 
 suspend fun doSomethingUsefulOne(): Int {

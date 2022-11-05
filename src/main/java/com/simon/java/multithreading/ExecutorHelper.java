@@ -7,12 +7,10 @@ import okhttp3.Response;
 
 import java.io.IOException;
 import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ExecutorHelper {
     private static LinkedBlockingQueue<Test> taskQueue = new LinkedBlockingQueue<Test>();
-    private static AtomicBoolean runningState = new AtomicBoolean(false);
 
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i <5; i++) {
@@ -45,7 +43,7 @@ public class ExecutorHelper {
     }
 
     /**
-     * 进行安装处理
+     * 进行任务处理
      */
     static Runnable task = () -> {
         try {
