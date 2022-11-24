@@ -1,4 +1,4 @@
-package com.simon.kotlin.coroutines;
+package com.simon.java.suspendcps;
 
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
@@ -12,43 +12,48 @@ import static com.simon.kotlin.coroutines.CoroutinesSuspendKt.*;
 
 public class JavaWithContinuation {
 
-    public static void testGetUserInfoAsync() throws ExecutionException, InterruptedException {
-        String s = getUserInfoAsync().get();
-        System.out.printf("s");
+    public void testGetUserInfoAsync() throws ExecutionException, InterruptedException {
+        String user = getUserInfoAsync().get();
+        System.out.println("testGetUserInfoAsync:" + user);
     }
 
-    public static void testGetUserInfoJFlow() {
+    public void testGetUserInfoJFlow() {
         Flow.Publisher<String> userInfoJFlow = getUserInfoJFlow();
-        userInfoJFlow.subscribe(new Flow.Subscriber<String>() {
+        userInfoJFlow.subscribe(new Flow.Subscriber<>() {
+            private Flow.Subscription subscription;
+
             @Override
             public void onSubscribe(Flow.Subscription subscription) {
-
+                System.out.println("onSubscribe");
+                this.subscription = subscription;
+                this.subscription.request(1); //requesting data from publisher
+                System.out.println("onSubscribe requested 1 item");
             }
 
             @Override
             public void onNext(String item) {
-                System.out.printf(item);
+                //没有输出？？？
+                System.out.println("testGetUserInfoJFlow:" + item);
             }
 
             @Override
             public void onError(Throwable throwable) {
-
+                System.out.println("onError");
             }
 
             @Override
             public void onComplete() {
-
+                System.out.println("onComplete");
             }
         });
-
     }
 
-    public static void testGetUserInfoCPS() {
+    public void testGetUserInfoCPS() {
         getUserInfo(new Continuation<String>() {
                         @Override
                         public void resumeWith(@NotNull Object o) {
-                            var str = (String) o;
-                            System.out.printf(str);
+                            var user = (String) o;
+                            System.out.println("testGetUserInfoCPS " + user);
                         }
 
                         @NotNull

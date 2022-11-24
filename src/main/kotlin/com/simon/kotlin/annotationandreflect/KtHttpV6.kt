@@ -67,10 +67,10 @@ object KtHttpV6 {
                 if (parameterAnnotation is Field) {
                     val key = parameterAnnotation.value
                     val value = args[i].toString()
-                    if (!url.contains("?")) {
-                        url += "?$key=$value"
+                    url += if (!url.contains("?")) {
+                        "?$key=$value"
                     } else {
-                        url += "&$key=$value"
+                        "&$key=$value"
                     }
 
                 }

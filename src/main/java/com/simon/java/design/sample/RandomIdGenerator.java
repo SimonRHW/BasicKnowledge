@@ -24,9 +24,8 @@ public class RandomIdGenerator implements IdGenerator {
         }
         long currentTimeMillis = System.currentTimeMillis();
         String randomString = generateRandomAlphameric(8);
-        String id = String.format("%s-%d-%s",
+        return String.format("%s-%d-%s",
                 substrOfHostName, currentTimeMillis, randomString);
-        return id;
     }
 
     private String getLastFieldOfHostName() throws UnknownHostException{

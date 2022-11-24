@@ -1,6 +1,6 @@
 buildscript {
-    ext.kotlin_version = '1.6.20'
-    ext.kotlinx_coroutines = '1.6.1'
+    ext.kotlin_version = '1.7.21'
+    ext.kotlinx_coroutines = '1.6.4'
 
     repositories {
         google()
@@ -70,7 +70,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-reactive:$kotlinx_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlinx_coroutines"
 
-    testCompile group: 'junit', name: 'junit', version: '4.13.1'
+    testImplementation "junit:junit:4.13.2"
 
     // RxJava
     implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
@@ -85,15 +85,16 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     //guava
     implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'com.google.code.gson:gson:2.10'
 
     implementation 'com.squareup:javapoet:1.13.0'
-    implementation 'com.alibaba:fastjson:2.0.12'
+    implementation 'com.alibaba:fastjson:2.0.19'
 
     implementation 'org.apache.commons:commons-lang3:3.12.0'
-    implementation 'org.slf4j:slf4j-log4j12:1.7.36'
+    implementation 'org.slf4j:slf4j-log4j12:2.0.4'
 
-    implementation 'com.google.dagger:dagger:2.43.2'
-    kapt 'com.google.dagger:dagger-compiler:2.43.2'
+    implementation 'com.google.dagger:dagger:2.44.2'
+    kapt 'com.google.dagger:dagger-compiler:2.44.2'
 }
 
 compileKotlin {

@@ -36,16 +36,20 @@ suspend fun getUserInfo(): String {
 
 //CPS 转换（Continuation-Passing-Style Transformation）
 //CPS 转换的过程中，函数的类型发生了变化：“suspend ()->String” 变成了 “(Continuation)-> Any?”。
-fun getUserInfoCPS(continuation: Continuation<String>): Any? {
+fun getUserInfoCPS(continuation: Continuation<String>): Any {
     continuation.resumeWith(Result.success("BoyCoder"))
     return Unit
 }
 
 fun getUserInfoAsync(): CompletableFuture<String> =
-    GlobalScope.future { getUserInfo() }
+    GlobalScope.future {
+        getUserInfo()
+    }
 
 fun getUserInfoJFlow(): Flow.Publisher<String> =
-    flowPublish { getUserInfo() }
+    flowPublish {
+        getUserInfo()
+    }
 
 suspend fun getFriendList(user: String): String {
     withContext(Dispatchers.IO) {
