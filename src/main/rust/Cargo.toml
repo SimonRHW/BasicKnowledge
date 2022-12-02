@@ -9,4 +9,4 @@ edition = "2021"
 jni = "0.20.0"
 
 [lib]
-crate_type = ["staticlib", "dylib"]
+crate_type = ["staticlib", "cdylib"]
