@@ -1,6 +1,7 @@
 package com.simon.kotlin.coroutines
 
 import kotlinx.coroutines.*
+import kotlin.coroutines.*
 
 /**
 协程，可以理解为更加轻量的线程，成千上万个协程可以同时运行在一个线程当中；
@@ -95,3 +96,47 @@ private fun testCoroutineWithThread() = runBlocking(Dispatchers.IO) {
 
     delay(5000L)
 }
+
+//类型 suspend () -> T
+/*
+createCoroutine{}、startCoroutine{}，它们是 Kotlin 提供的两个底层 API，
+前者是用来创建协程的，后者是用来创建并同时启动协程的。
+*/
+val block = suspend {
+    println("Hello!")
+    delay(1000L)
+    println("World!")
+    "Result"
+}
+
+private fun testStartCoroutine() {
+
+    val continuation = object : Continuation<String> {
+        override val context: CoroutineContext
+            get() = EmptyCoroutineContext
+
+        override fun resumeWith(result: Result<String>) {
+            println("Result is: ${result.getOrNull()}")
+        }
+    }
+
+    block.startCoroutine(continuation)
+}
+
+
+private fun testCreateCoroutine() {
+
+    val continuation = object : Continuation<String> {
+        override val context: CoroutineContext
+            get() = EmptyCoroutineContext
+
+        override fun resumeWith(result: Result<String>) {
+            println("Result is: ${result.getOrNull()}")
+        }
+    }
+
+    val coroutine = block.createCoroutine(continuation)
+
+    coroutine.resume(Unit)
+}
+

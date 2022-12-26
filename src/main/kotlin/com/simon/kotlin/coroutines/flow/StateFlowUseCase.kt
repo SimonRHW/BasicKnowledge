@@ -15,7 +15,7 @@ fun main() {
 //        同时对ui而言，过期的状态毫无意义，所以stateFLow永远更新最新的数据（和liveData相似），
 //        所以必须有粘滞度=1的粘滞事件，让ui状态保持到最新。
 //        另外在一个时间内发送多个事件，不会管中间事件有没有消费完成都会执行最新的一条.(中间值会丢失)
-//
+
         val stateFlow = MutableStateFlow<Int>(value = -1)
         launch {
             stateFlow.collect {

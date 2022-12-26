@@ -12,7 +12,8 @@ fun main() {
     runBlocking {
         //不管是否订阅，流都会发送
         // SharedFlow侧重在事件，当某个事件触发，发送到队列之中，按照挂起或者非挂起、缓存策略等将事件发送到接受方，
-        // 在具体使用时，SharedFlow更适合通知ui界面的一些事件，比如toast等，也适合作为viewModel和repository之间的桥梁用作数据的传输。
+        // 在具体使用时，SharedFlow更适合通知ui界面的一些事件，
+        // 比如toast等，也适合作为viewModel和repository之间的桥梁用作数据的传输。
 
         val sharedFlow = MutableSharedFlow<Int>(
             replay = 1,//相当于粘性数据 为0时 collect2收集不到数据
