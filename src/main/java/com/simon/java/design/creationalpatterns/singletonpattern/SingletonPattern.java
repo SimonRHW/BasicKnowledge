@@ -1,4 +1,4 @@
-package com.simon.java.design.pattern;
+package com.simon.java.design.creationalpatterns.singletonpattern;
 
 /**
  * 单例模式知识点：类加载、并发、序列化
@@ -75,12 +75,11 @@ public class SingletonPattern {
         这并不是一个原子操作，会存在以下步骤：
         1、会给singleton分配内存空间
         2、调用singleton的构造函数等来初始化singleton
-        3、将singleton 对象指向分配的内存空间（执行完着一步，singleton 就不是null了）
+        3、将singleton 对象指向分配的内存空间（执行完第一步，singleton 就不是null了）
         存在重排序的优化，第二部和第三步的顺序是不能保证的。
         如果是 1-2-3 没有问题，
         如果是 1-3-2 的情况下，在第三步执行后singleton并不是null 但是此时第二步是没有执行的，假设此时另一个线程进入了getInstanceDCL方法
         由于此时的singleton已经不是null了，所以他会通过第一层的检查并且直接返回，但实际上这个时候的singleton并没有完全的完成初始化，这样使用该实例会报错。
-
         使用volatile可以防止上述所说的重排序，就可以避免拿到未完成初始化的对象
          */
         private static Singleton getInstanceDCL() {

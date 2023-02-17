@@ -6,10 +6,10 @@ func findAverage(a []int) float64 {
 	count := 4
 	sum := 0
 	for i := 0; i < count; i++ {
-		sum += (a[i])
+		sum += a[i]
 	}
 
-	return float64(sum/count)
+	return float64(sum / count)
 }
 
 func main() {

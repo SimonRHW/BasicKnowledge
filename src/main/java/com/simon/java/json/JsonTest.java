@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.Objects;
 
 public class JsonTest {
+
     private final static Gson outer;
     public static final String SIGN_KEY = "F1F2EE3CCD4A3A73B728DD154FC32F1C";
 
@@ -53,7 +54,6 @@ public class JsonTest {
         try {
             File jsonFile = new File(fileName);
             FileReader fileReader = new FileReader(jsonFile);
-
             Reader reader = new InputStreamReader(new FileInputStream(jsonFile), "utf-8");
             int ch = 0;
             StringBuffer sb = new StringBuffer();

@@ -34,16 +34,15 @@ public class RandomIdGenerator implements IdGenerator {
         if (hostName == null || hostName.isEmpty()) {
             throw new UnknownHostException("...");
         }
-        substrOfHostName = getLastSubstrSplittedByDot(hostName);
+        substrOfHostName = getLastSubstrSplitByDot(hostName);
         return substrOfHostName;
     }
 
     @VisibleForTesting
-    protected String getLastSubstrSplittedByDot(String hostName) {
+    protected String getLastSubstrSplitByDot(String hostName) {
         if (hostName == null || hostName.isEmpty()) {
             throw new IllegalArgumentException("...");
         }
-
         String[] tokens = hostName.split("\\.");
         String substrOfHostName = tokens[tokens.length - 1];
         return substrOfHostName;

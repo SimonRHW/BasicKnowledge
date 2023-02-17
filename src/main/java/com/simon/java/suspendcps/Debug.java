@@ -9,6 +9,5 @@ public class Debug {
         javaWithContinuation.testGetUserInfoAsync();
         javaWithContinuation.testGetUserInfoJFlow();
         javaWithContinuation.testGetUserInfoAsync();
-
     }
 }
