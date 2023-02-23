@@ -1,4 +1,4 @@
-package com.simon.kotlin.design.pattern
+package com.simon.kotlin.design
 
 // Kotlin 当中 5 种单例模式的写法。除了最后一种“接口模板”的方式，是为了学习研究不被推荐使用以外，
 // 其他 4 种单例模式都是有一定使用场景的。这 4 种单例之间各有优劣，我们可以在工作中根据实际需求，来选择对应的实现方式：

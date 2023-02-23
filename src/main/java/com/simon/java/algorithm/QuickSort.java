@@ -8,7 +8,11 @@ import java.util.Stack;
  * Function:快速排序
  */
 public class QuickSort {
-
+    public static void main(String[] args) {
+        int[] array = {3, 2, 1, 5, 4};
+        quickSort(array, 0, array.length - 1);
+        System.out.println(Arrays.toString(array));
+    }
     /**
      * 快速排序（递归）
      *
