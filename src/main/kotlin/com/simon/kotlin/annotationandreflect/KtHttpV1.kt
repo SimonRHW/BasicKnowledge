@@ -2,6 +2,7 @@ package com.simon.kotlin.annotationandreflect
 
 import com.google.gson.Gson
 import com.simon.kotlin.annotationandreflect.annotations.Field
+import com.simon.kotlin.annotationandreflect.annotations.GET
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.lang.reflect.InvocationHandler
@@ -18,14 +19,25 @@ interface ApiService {
     @GET("/repo")
     fun repos(
         @Field("lang") lang: String,
-        @Field("since") since: String
+        @Field("since") since: String,
     ): RepoList
+}
+
+/**
+ * 只是为了模拟Java动态代理，实际更复杂
+ */
+class ApiImpl(val h: InvocationHandler) : Proxy(h), ApiService {
+    override fun repos(lang: String, since: String): RepoList {
+        val method: Method = ::repos.javaMethod!!
+        val args = arrayOf(lang, since)
+        return h.invoke(this, method, args) as RepoList
+    }
 }
 
 data class RepoList(
     var count: Int?,
     var items: List<Repo>?,
-    var msg: String?
+    var msg: String?,
 )
 
 data class Repo(
@@ -36,7 +48,7 @@ data class Repo(
     var lang: String?,
     var repo: String?,
     var repo_link: String?,
-    var stars: String?
+    var stars: String?,
 )
 
 object KtHttpV1 {
@@ -101,15 +113,4 @@ fun main() {
     val api: ApiService = KtHttpV1.create(ApiService::class.java)
     val data: RepoList = api.repos(lang = "Kotlin", since = "weekly")
     println(data)
-}
-
-/**
- * 只是为了模拟Java动态代理，实际更复杂
- */
-class ApiImpl(val h: InvocationHandler) : Proxy(h), ApiService {
-    override fun repos(lang: String, since: String): RepoList {
-        val method: Method = ::repos.javaMethod!!
-        val args = arrayOf(lang, since)
-        return h.invoke(this, method, args) as RepoList
-    }
 }

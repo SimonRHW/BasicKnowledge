@@ -5,7 +5,18 @@ import java.io.*;
 
 public class FileManager {
 
-    public void download(String src, String dest) {
+    public static void main(String[] args) {
+        try {
+            new FileManager().copyFile("src/main/resources/sample.txt", "src/main/resources/test.log");
+            FileInputStream fileInputStream = new FileInputStream("src/main/resources/test.log");
+            int read = fileInputStream.read();
+            System.out.println("read" + read);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void copyFile(String src, String dest) {
         BufferedInputStream in = null;
         BufferedOutputStream out = null;
         FileInputStream fileIn = null;

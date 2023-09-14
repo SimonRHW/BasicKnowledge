@@ -2,6 +2,7 @@ package com.simon.kotlin.annotationandreflect
 
 import com.google.gson.Gson
 import com.simon.kotlin.annotationandreflect.annotations.Field
+import com.simon.kotlin.annotationandreflect.annotations.GET
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.lang.reflect.Method

@@ -54,7 +54,6 @@ public class TreadPoolTest {
         }
     };
 
-
     static {
         THREAD_POOL_EXECUTOR = new ThreadPoolExecutor(
                 1, 1, 30L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(1),

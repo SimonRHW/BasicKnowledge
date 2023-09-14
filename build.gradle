@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.7.21'
+    ext.kotlin_version = '1.8.21'
     ext.kotlinx_coroutines = '1.6.4'
     ext.ktor_version = '2.2.1'
 
@@ -101,12 +101,12 @@ dependencies {
     implementation 'com.google.dagger:dagger:2.44.2'
     kapt 'com.google.dagger:dagger-compiler:2.44.2'
 
-    implementation("io.ktor:ktor-client-core:$ktor_version")
-    implementation("io.ktor:ktor-client-cio:$ktor_version")
-    implementation("io.ktor:ktor-client-websockets:$ktor_version")
+    implementation('io.ktor:ktor-client-core-jvm:2.3.4')
+    implementation('io.ktor:ktor-client-cio-jvm:2.3.4')
+    implementation('io.ktor:ktor-client-websockets-jvm:2.3.4')
 
-    implementation("io.ktor:ktor-server-core:$ktor_version")
-    implementation("io.ktor:ktor-server-netty:$ktor_version")
+    implementation('io.ktor:ktor-server-core-jvm:2.3.4')
+    implementation('io.ktor:ktor-server-netty-jvm:2.3.4')
 }
 
 compileKotlin {

@@ -5,6 +5,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.google.gson.*;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
+import com.simon.java.bean.CarModel;
 import com.simon.java.util.MD5Utils;
 import com.simon.java.util.StringUtils;
 import io.reactivex.Observable;
@@ -26,6 +27,20 @@ public class JsonTest {
     }
 
     public static void main(String[] args) {
+        CarModel model = fromJson(null, CarModel.class);
+        System.out.println(model);
+    }
+
+    public static <T> T fromJson(String json, Class<T> tClass) {
+        try {
+            return new Gson().fromJson(json, tClass);
+        } catch (Exception e) {
+            System.out.printf(e.toString());
+            return null;
+        }
+    }
+
+    private void testParse() {
         String json = readJsonFile("src/main/resources/test.json");
         System.out.println(json);
         System.out.println("\n\n\n");

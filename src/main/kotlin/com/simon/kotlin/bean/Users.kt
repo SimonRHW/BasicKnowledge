@@ -2,7 +2,7 @@ package com.simon.kotlin.bean
 
 class Users {
     var name: String = "simon"
-    val age:Int =1
+    val age: Int = 1
     var surname: String = ""
         get() = field.toUpperCase()
 
@@ -18,15 +18,15 @@ class Users {
     }
 }
 
-fun main(){
+fun main() {
     val user = Users()
     user.name = "simon"
     user.surname = "ren"
-    user.email= "simon@gmail.com"
+    user.email = "simon@gmail.com"
     println(user.name)
     println(user.surname)
     println("${user.email}one")
-    user.isEmail  =true
-    user.email= "ren@gmail.com"
+    user.isEmail = true
+    user.email = "ren@gmail.com"
     println("${user.email}two")
 }

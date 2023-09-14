@@ -18,7 +18,7 @@ public class BehaviorSubjectTest {
         behaviorSubject.onNext(-3);
         behaviorSubject.onNext(-2);
         behaviorSubject.onNext(-1);
-        behaviorSubject.subscribe(new Observer<Integer>() {
+        behaviorSubject.retry().subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(@NotNull Disposable d) {
 
@@ -44,7 +44,7 @@ public class BehaviorSubjectTest {
 //        behaviorSubject.onComplete();
         behaviorSubject.onNext(3);
         behaviorSubject.onNext(4);
-        behaviorSubject.subscribe(new Observer<Integer>() {
+        behaviorSubject.retry().subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(@NotNull Disposable d) {
 

@@ -37,9 +37,9 @@ public class TestClass {
             log.append(" has  ");
             log.append(errorTimes);
             log.append(" error.");
-            System.out.println(log.toString());
+            System.out.println(log);
         } catch (InstantiationException | InvocationTargetException
-                | ClassNotFoundException | NoSuchMethodException e) {
+                 | ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
     }

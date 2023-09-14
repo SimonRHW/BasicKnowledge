@@ -3,6 +3,7 @@ package com.simon.kotlin.annotationandreflect
 import com.google.gson.Gson
 import com.google.gson.internal.`$Gson$Types`.getRawType
 import com.simon.kotlin.annotationandreflect.annotations.Field
+import com.simon.kotlin.annotationandreflect.annotations.GET
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import okhttp3.OkHttpClient
