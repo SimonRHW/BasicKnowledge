@@ -1,7 +1,6 @@
 buildscript {
-    ext.kotlin_version = '1.8.21'
-    ext.kotlinx_coroutines = '1.6.4'
-    ext.ktor_version = '2.2.1'
+    ext.kotlin_version = '1.9.20'
+    ext.kotlinx_coroutines = '1.7.3'
 
     repositories {
         google()
@@ -27,7 +26,7 @@ buildscript {
 
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.20'
 }
 
 group 'com.simon'
@@ -68,6 +67,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx3:$kotlinx_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:$kotlinx_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-jdk9:$kotlinx_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-guava:$kotlinx_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-reactive:$kotlinx_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlinx_coroutines"
 
@@ -88,8 +88,6 @@ dependencies {
     //guava
     implementation 'com.google.guava:guava:31.1-jre'
     implementation 'com.google.code.gson:gson:2.10'
-
-    implementation 'com.squareup:javapoet:1.13.0'
     implementation 'com.alibaba:fastjson:2.0.19'
 
     implementation 'org.apache.commons:commons-lang3:3.12.0'
@@ -98,15 +96,24 @@ dependencies {
     implementation 'com.auth0:java-jwt:4.2.1'
     implementation 'com.auth0:jwks-rsa:0.21.2'
 
-    implementation 'com.google.dagger:dagger:2.44.2'
-    kapt 'com.google.dagger:dagger-compiler:2.44.2'
+    implementation 'com.google.dagger:dagger:2.48.1'
+    kapt 'com.google.dagger:dagger-compiler:2.48.1'
 
-    implementation('io.ktor:ktor-client-core-jvm:2.3.4')
-    implementation('io.ktor:ktor-client-cio-jvm:2.3.4')
-    implementation('io.ktor:ktor-client-websockets-jvm:2.3.4')
+    implementation('io.ktor:ktor-client-core-jvm:2.3.6')
+    implementation('io.ktor:ktor-client-cio-jvm:2.3.6')
+    implementation('io.ktor:ktor-client-websockets-jvm:2.3.6')
+    implementation('io.ktor:ktor-server-core-jvm:2.3.6')
+    implementation('io.ktor:ktor-server-netty-jvm:2.3.6')
 
-    implementation('io.ktor:ktor-server-core-jvm:2.3.4')
-    implementation('io.ktor:ktor-server-netty-jvm:2.3.4')
+    implementation 'com.squareup:javapoet:1.13.0'
+
+    //ASM依赖
+    implementation "org.ow2.asm:asm:8.0"
+    implementation "org.ow2.asm:asm-util:8.0"
+    implementation "org.ow2.asm:asm-commons:8.0"
+    implementation 'org.ow2.asm:asm-analysis:8.0'
+    implementation 'org.ow2.asm:asm-tree:8.0'
+    implementation 'commons-io:commons-io:2.11.0'
 }
 
 compileKotlin {
