@@ -7,7 +7,7 @@ public class Debug {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         JavaWithContinuation javaWithContinuation = new JavaWithContinuation();
         javaWithContinuation.testGetUserInfoAsync();
-        javaWithContinuation.testGetUserInfoJFlow();
-        javaWithContinuation.testGetUserInfoAsync();
+//        javaWithContinuation.testGetUserInfoJFlow();
+//        javaWithContinuation.testGetUserInfoCPS();
     }
 }
