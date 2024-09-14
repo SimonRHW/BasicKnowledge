@@ -5,8 +5,10 @@ import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Flow;
+import java.util.concurrent.TimeUnit;
 
 import static com.simon.kotlin.coroutines.CoroutinesSuspendKt.*;
 
@@ -48,11 +50,19 @@ public class JavaWithContinuation {
         });
     }
 
-    public void testGetUserInfoCPS() {
+    public String testGetUserInfoCPS() {
+        final String[] temp = {""};
+        CountDownLatch countDownLatch = new CountDownLatch(1);
         getUserInfo(new Continuation<String>() {
                         @Override
                         public void resumeWith(@NotNull Object o) {
                             var user = (String) o;
+                            temp[0] = user;
+                            try {
+                                countDownLatch.await(5000, TimeUnit.MICROSECONDS);
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
                             System.out.println("testGetUserInfoCPS " + user);
                         }
 
@@ -63,6 +73,7 @@ public class JavaWithContinuation {
                         }
                     }
         );
+        return  temp[0];
     }
 
 }
