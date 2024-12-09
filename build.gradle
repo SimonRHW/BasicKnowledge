@@ -1,6 +1,6 @@
 buildscript {
-    ext.kotlin_version = '1.9.20'
-    ext.kotlinx_coroutines = '1.7.3'
+    ext.kotlin_version = '2.0.21'
+    ext.kotlinx_coroutines = '1.9.0'
 
     repositories {
         google()
@@ -96,14 +96,14 @@ dependencies {
     implementation 'com.auth0:java-jwt:4.2.1'
     implementation 'com.auth0:jwks-rsa:0.21.2'
 
-    implementation 'com.google.dagger:dagger:2.48.1'
-    kapt 'com.google.dagger:dagger-compiler:2.48.1'
+    implementation 'com.google.dagger:dagger:2.52'
+    kapt 'com.google.dagger:dagger-compiler:2.52'
 
-    implementation('io.ktor:ktor-client-core-jvm:2.3.6')
-    implementation('io.ktor:ktor-client-cio-jvm:2.3.6')
-    implementation('io.ktor:ktor-client-websockets-jvm:2.3.6')
-    implementation('io.ktor:ktor-server-core-jvm:2.3.6')
-    implementation('io.ktor:ktor-server-netty-jvm:2.3.6')
+    implementation('io.ktor:ktor-client-core-jvm:3.0.0')
+    implementation('io.ktor:ktor-client-cio-jvm:3.0.0')
+    implementation('io.ktor:ktor-client-websockets-jvm:3.0.0')
+    implementation('io.ktor:ktor-server-core-jvm:3.0.0')
+    implementation('io.ktor:ktor-server-netty-jvm:3.0.0')
 
     implementation 'com.squareup:javapoet:1.13.0'
 
