@@ -6,7 +6,7 @@ package com.simon.kotlin.example
  * desc: 模式匹配
  */
 
-fun main(){
+fun main() {
     println(Train(0))
     println(Train(1))
     println(Train(2))
@@ -14,12 +14,13 @@ fun main(){
     println(Train(100))
     println(Train(1.333))
 }
-class Train (val  data : Number){
+
+class Train(val data: Number) {
     override fun toString(): String {
-        return when(data){
+        return when (data) {
             1 -> "tiny"
-            in  2..10 -> "small"
-            is  Int -> "big int"
+            in 2..10 -> "small"
+            is Int -> "big int"
             else -> "$data"
         }
     }

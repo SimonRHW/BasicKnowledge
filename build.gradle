@@ -56,11 +56,9 @@ allprojects {
 
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kotlinx_coroutines"
@@ -86,7 +84,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     //guava
-    implementation 'com.google.guava:guava:32.0.0-jre'
+    implementation 'com.google.guava:guava:32.0.1-android'
     implementation 'com.google.code.gson:gson:2.10'
     implementation 'com.alibaba:fastjson:2.0.19'
 
@@ -113,7 +111,7 @@ dependencies {
     implementation "org.ow2.asm:asm-commons:8.0"
     implementation 'org.ow2.asm:asm-analysis:8.0'
     implementation 'org.ow2.asm:asm-tree:8.0'
-    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'commons-io:commons-io:2.14.0'
 }
 
 compileKotlin {
